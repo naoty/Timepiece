@@ -5,15 +5,15 @@ Swift extensions to calculate time
 ## Demo
 
 ```swift
-let now = NSDate()
-
 // Calculate
-let tomorrow = now + 1.day
+let now = NSDate()
 let dayAfterTomorrow = now + 2.days
 let lastMonth = now - 1.month
 
-// Set/Get components
-let minute = now.minute
+// Initialize
+let today = NSDate.today()
+let tomorrow = NSDate.tomorrow()
+let yesterday = NSDate.yesterday()
 ```
 
 ## Usage

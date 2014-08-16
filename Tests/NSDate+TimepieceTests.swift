@@ -56,4 +56,33 @@ class NSDateTestCase: XCTestCase {
     func testYear() {
         XCTAssertEqual(birthday.year, 1987, "")
     }
+    
+    func testToday() {
+        let components = calendar.components(.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit | .HourCalendarUnit | .MinuteCalendarUnit | .SecondCalendarUnit, fromDate: now)
+        components.hour = 0
+        components.minute = 0
+        components.second = 0
+        let today = calendar.dateFromComponents(components)
+        XCTAssertEqual(NSDate.today(), today, "")
+    }
+    
+    func testYesterday() {
+        let components = calendar.components(.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit | .HourCalendarUnit | .MinuteCalendarUnit | .SecondCalendarUnit, fromDate: now)
+        components.day = now.day - 1
+        components.hour = 0
+        components.minute = 0
+        components.second = 0
+        let yesterday = calendar.dateFromComponents(components)
+        XCTAssertEqual(NSDate.yesterday(), yesterday, "")
+    }
+    
+    func testTomorrow() {
+        let components = calendar.components(.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit | .HourCalendarUnit | .MinuteCalendarUnit | .SecondCalendarUnit, fromDate: now)
+        components.day = now.day + 1
+        components.hour = 0
+        components.minute = 0
+        components.second = 0
+        let tomorrow = calendar.dateFromComponents(components)
+        XCTAssertEqual(NSDate.tomorrow(), tomorrow, "")
+    }
 }

@@ -48,4 +48,21 @@ public extension NSDate {
     private var calendar: NSCalendar {
         return NSCalendar.currentCalendar()
     }
+    
+    class func today() -> NSDate {
+        let now = NSDate()
+        let components = now.components
+        components.hour = 0
+        components.minute = 0
+        components.second = 0
+        return now.calendar.dateFromComponents(components)
+    }
+    
+    class func yesterday() -> NSDate {
+        return today() - 1.day
+    }
+    
+    class func tomorrow() -> NSDate {
+        return today() + 1.day
+    }
 }

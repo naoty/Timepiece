@@ -11,7 +11,6 @@ let now = NSDate()
 let tomorrow = now + 1.day
 let dayAfterTomorrow = now + 2.days
 let lastMonth = now - 1.month
-let distancePast = now - ∞
 
 // Set/Get components
 let minute = now.minute

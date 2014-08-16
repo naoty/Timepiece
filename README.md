@@ -14,11 +14,6 @@ let lastMonth = now - 1.month
 
 // Set/Get components
 let minute = now.minute
-let timeToSleep = now.change(hour: 23, minute: 0)
-
-// Parse
-let birthday = NSDate(string: "1987-06-02")
-let birthdayText = birthday.string(format: "YYYY-MM-dd")
 ```
 
 ## Usage

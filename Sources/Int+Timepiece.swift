@@ -9,52 +9,45 @@
 import Foundation
 
 public extension Int {
-    var second: (Int, NSCalendarUnit) {
-        return (self, .SecondCalendarUnit)
+    var year: Duration {
+        return Duration(value: self, unit: .YearCalendarUnit)
     }
-    var seconds: (Int, NSCalendarUnit) {
-        return self.second
-    }
-    
-    var minute: (Int, NSCalendarUnit) {
-        return (self, .MinuteCalendarUnit)
-    }
-    var minutes: (Int, NSCalendarUnit) {
-        return self.minute
+    var years: Duration {
+        return year
     }
     
-    var hour: (Int, NSCalendarUnit) {
-        return (self, .HourCalendarUnit)
+    var month: Duration {
+        return Duration(value: self, unit: .MonthCalendarUnit)
     }
-    var hours: (Int, NSCalendarUnit) {
-        return self.hour
-    }
-    
-    var day: (Int, NSCalendarUnit) {
-        return (self, .DayCalendarUnit)
-    }
-    var days: (Int, NSCalendarUnit) {
-        return self.day
+    var months: Duration {
+        return month
     }
     
-    var week: (Int, NSCalendarUnit) {
-        return (self, .WeekCalendarUnit)
+    var day: Duration {
+        return Duration(value: self, unit: .DayCalendarUnit)
     }
-    var weeks: (Int, NSCalendarUnit) {
-        return self.week
-    }
-    
-    var month: (Int, NSCalendarUnit) {
-        return (self, .MonthCalendarUnit)
-    }
-    var months: (Int, NSCalendarUnit) {
-        return self.month
+    var days: Duration {
+        return day
     }
     
-    var year: (Int, NSCalendarUnit) {
-        return (self, .YearCalendarUnit)
+    var hour: Duration {
+        return Duration(value: self, unit: .HourCalendarUnit)
     }
-    var years: (Int, NSCalendarUnit) {
-        return self.year
+    var hours: Duration {
+        return hour
+    }
+    
+    var minute: Duration {
+        return Duration(value: self, unit: .MinuteCalendarUnit)
+    }
+    var minutes: Duration {
+        return minute
+    }
+    
+    var second: Duration {
+        return Duration(value: self, unit: .SecondCalendarUnit)
+    }
+    var seconds: Duration {
+        return second
     }
 }

@@ -33,28 +33,28 @@ class NSDateTestCase: XCTestCase {
         XCTAssertEqual(now - 1.day, yesterday, "")
     }
     
-    func testSecond() {
-        XCTAssertEqual(birthday.second, 0, "")
-    }
-    
-    func testMinute() {
-        XCTAssertEqual(birthday.minute, 0, "")
-    }
-    
-    func testHour() {
-        XCTAssertEqual(birthday.hour, 0, "")
-    }
-    
-    func testDay() {
-        XCTAssertEqual(birthday.day, 2, "")
+    func testYear() {
+        XCTAssertEqual(birthday.year, 1987, "")
     }
     
     func testMonth() {
         XCTAssertEqual(birthday.month, 6, "")
     }
     
-    func testYear() {
-        XCTAssertEqual(birthday.year, 1987, "")
+    func testDay() {
+        XCTAssertEqual(birthday.day, 2, "")
+    }
+    
+    func testHour() {
+        XCTAssertEqual(birthday.hour, 0, "")
+    }
+    
+    func testMinute() {
+        XCTAssertEqual(birthday.minute, 0, "")
+    }
+    
+    func testSecond() {
+        XCTAssertEqual(birthday.second, 0, "")
     }
     
     func testToday() {

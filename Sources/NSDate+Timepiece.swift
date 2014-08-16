@@ -8,37 +8,37 @@
 
 import Foundation
 
-public func + (left: NSDate, right: (value: Int, unit: NSCalendarUnit)) -> NSDate {
-    return NSCalendar.currentCalendar().dateByAddingUnit(right.unit, value: right.value, toDate: left, options: .SearchBackwards)
+public func + (lhs: NSDate, rhs: Duration) -> NSDate {
+    return NSCalendar.currentCalendar().dateByAddingUnit(rhs.unit, value: rhs.value, toDate: lhs, options: .SearchBackwards)
 }
 
-public func - (left: NSDate, right: (value: Int, unit: NSCalendarUnit)) -> NSDate {
-    return NSCalendar.currentCalendar().dateByAddingUnit(right.unit, value: -right.value, toDate: left, options: .SearchBackwards)
+public func - (lhs: NSDate, rhs: Duration) -> NSDate {
+    return NSCalendar.currentCalendar().dateByAddingUnit(rhs.unit, value: -rhs.value, toDate: lhs, options: .SearchBackwards)
 }
 
 public extension NSDate {
-    var second: Int {
-        return components.second
-    }
-    
-    var minute: Int {
-        return components.minute
-    }
-    
-    var hour: Int {
-        return components.hour
-    }
-    
-    var day: Int {
-        return components.day
+    var year: Int {
+        return components.year
     }
     
     var month: Int {
         return components.month
     }
     
-    var year: Int {
-        return components.year
+    var day: Int {
+        return components.day
+    }
+    
+    var hour: Int {
+        return components.hour
+    }
+    
+    var minute: Int {
+        return components.minute
+    }
+    
+    var second: Int {
+        return components.second
     }
     
     private var components: NSDateComponents {

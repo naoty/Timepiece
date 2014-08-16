@@ -9,6 +9,8 @@ Swift extensions to calculate time
 let now = NSDate()
 let dayAfterTomorrow = now + 2.days
 let lastMonth = now - 1.month
+let nextWeek = 1.week.later
+let yearBeforeLast = 2.years.ago
 
 // Initialize
 let today = NSDate.today()

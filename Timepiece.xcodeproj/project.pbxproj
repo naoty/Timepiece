@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D36DD68199FBE6700E752F5 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36DD67199FBE6700E752F5 /* Duration.swift */; };
+		3D36DD6A199FBE8500E752F5 /* DurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36DD69199FBE8500E752F5 /* DurationTests.swift */; };
 		3DC6182B199E26CD00FB7AAC /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6182A199E26CD00FB7AAC /* Int+Timepiece.swift */; };
 		3DC6182E199E270F00FB7AAC /* Int+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6182C199E26FE00FB7AAC /* Int+TimepieceTests.swift */; };
 		3DC61834199F0B2100FB7AAC /* NSDate+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC61833199F0B2100FB7AAC /* NSDate+Timepiece.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D36DD67199FBE6700E752F5 /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		3D36DD69199FBE8500E752F5 /* DurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationTests.swift; sourceTree = "<group>"; };
 		3DC6180F199E1F8400FB7AAC /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC6181A199E1F8400FB7AAC /* TimepieceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimepieceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC6182A199E26CD00FB7AAC /* Int+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Timepiece.swift"; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 		3DC61828199E204800FB7AAC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3D36DD67199FBE6700E752F5 /* Duration.swift */,
 				3DC6182A199E26CD00FB7AAC /* Int+Timepiece.swift */,
 				3DC61833199F0B2100FB7AAC /* NSDate+Timepiece.swift */,
 			);
@@ -80,6 +85,7 @@
 		3DC61829199E204800FB7AAC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				3D36DD69199FBE8500E752F5 /* DurationTests.swift */,
 				3DC6182C199E26FE00FB7AAC /* Int+TimepieceTests.swift */,
 				3DC61835199F0C0500FB7AAC /* NSDate+TimepieceTests.swift */,
 			);
@@ -192,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D36DD68199FBE6700E752F5 /* Duration.swift in Sources */,
 				3DC61834199F0B2100FB7AAC /* NSDate+Timepiece.swift in Sources */,
 				3DC6182B199E26CD00FB7AAC /* Int+Timepiece.swift in Sources */,
 			);
@@ -201,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D36DD6A199FBE8500E752F5 /* DurationTests.swift in Sources */,
 				3DC61836199F0C0500FB7AAC /* NSDate+TimepieceTests.swift in Sources */,
 				3DC6182E199E270F00FB7AAC /* Int+TimepieceTests.swift in Sources */,
 			);

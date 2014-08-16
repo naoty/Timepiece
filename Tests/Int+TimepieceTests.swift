@@ -10,87 +10,63 @@ import Timepiece
 import XCTest
 
 class IntTestCase: XCTestCase {
-    func testSecond() {
-        let (value, unit) = 1.second
-        XCTAssertEqual(value, 1, "")
-        XCTAssertEqual(unit, NSCalendarUnit.SecondCalendarUnit, "")
-    }
-    
-    func testSeconds() {
-        let (value, unit) = 2.seconds
-        XCTAssertEqual(value, 2, "")
-        XCTAssertEqual(unit, NSCalendarUnit.SecondCalendarUnit, "")
-    }
-    
-    func testMinute() {
-        let (value, unit) = 1.minute
-        XCTAssertEqual(value, 1, "")
-        XCTAssertEqual(unit, NSCalendarUnit.MinuteCalendarUnit, "")
-    }
-    
-    func testMinutes() {
-        let (value, unit) = 2.minutes
-        XCTAssertEqual(value, 2, "")
-        XCTAssertEqual(unit, NSCalendarUnit.MinuteCalendarUnit, "")
-    }
-    
-    func testHour() {
-        let (value, unit) = 1.hour
-        XCTAssertEqual(value, 1, "")
-        XCTAssertEqual(unit, NSCalendarUnit.HourCalendarUnit, "")
-    }
-    
-    func testHours() {
-        let (value, unit) = 2.hours
-        XCTAssertEqual(value, 2, "")
-        XCTAssertEqual(unit, NSCalendarUnit.HourCalendarUnit, "")
-    }
-    
-    func testDay() {
-        let (value, unit) = 1.day
-        XCTAssertEqual(value, 1, "")
-        XCTAssertEqual(unit, NSCalendarUnit.DayCalendarUnit, "")
-    }
-    
-    func testDays() {
-        let (value, unit) = 2.days
-        XCTAssertEqual(value, 2, "")
-        XCTAssertEqual(unit, NSCalendarUnit.DayCalendarUnit, "")
-    }
-    
-    func testWeek() {
-        let (value, unit) = 1.week
-        XCTAssertEqual(value, 1, "")
-        XCTAssertEqual(unit, NSCalendarUnit.WeekCalendarUnit, "")
-    }
-    
-    func testWeeks() {
-        let (value, unit) = 2.weeks
-        XCTAssertEqual(value, 2, "")
-        XCTAssertEqual(unit, NSCalendarUnit.WeekCalendarUnit, "")
-    }
-    
-    func testMonth() {
-        let (value, unit) = 1.month
-        XCTAssertEqual(value, 1, "")
-        XCTAssertEqual(unit, NSCalendarUnit.MonthCalendarUnit, "")
-    }
-    
-    func testMonths() {
-        let (value, unit) = 2.months
-        XCTAssertEqual(value, 2, "")
-        XCTAssertEqual(unit, NSCalendarUnit.MonthCalendarUnit, "")
-    }
-    
     func testYear() {
-        let (value, unit) = 1.year
-        XCTAssertEqual(value, 1, "")
-        XCTAssertEqual(unit, NSCalendarUnit.YearCalendarUnit, "")
+        XCTAssertEqual(1.year.value, 1, "")
+        XCTAssertEqual(1.year.unit, NSCalendarUnit.YearCalendarUnit, "")
     }
     
     func testYears() {
-        let (value, unit) = 2.years
-        XCTAssertEqual(value, 2, "")
-        XCTAssertEqual(unit, NSCalendarUnit.YearCalendarUnit, "")
+        XCTAssertEqual(2.years.value, 2, "")
+        XCTAssertEqual(2.years.unit, NSCalendarUnit.YearCalendarUnit, "")
+    }
+    
+    func testMonth() {
+        XCTAssertEqual(1.month.value, 1, "")
+        XCTAssertEqual(1.month.unit, NSCalendarUnit.MonthCalendarUnit, "")
+    }
+    
+    func testMonths() {
+        XCTAssertEqual(2.months.value, 2, "")
+        XCTAssertEqual(2.months.unit, NSCalendarUnit.MonthCalendarUnit, "")
+    }
+    
+    func testDay() {
+        XCTAssertEqual(1.day.value, 1, "")
+        XCTAssertEqual(1.day.unit, NSCalendarUnit.DayCalendarUnit, "")
+    }
+    
+    func testDays() {
+        XCTAssertEqual(2.days.value, 2, "")
+        XCTAssertEqual(2.days.unit, NSCalendarUnit.DayCalendarUnit, "")
+    }
+    
+    func testHour() {
+        XCTAssertEqual(1.hour.value, 1, "")
+        XCTAssertEqual(1.hour.unit, NSCalendarUnit.HourCalendarUnit, "")
+    }
+    
+    func testHours() {
+        XCTAssertEqual(2.hours.value, 2, "")
+        XCTAssertEqual(2.hours.unit, NSCalendarUnit.HourCalendarUnit, "")
+    }
+    
+    func testMinute() {
+        XCTAssertEqual(1.minute.value, 1, "")
+        XCTAssertEqual(1.minute.unit, NSCalendarUnit.MinuteCalendarUnit, "")
+    }
+    
+    func testMinutes() {
+        XCTAssertEqual(2.minutes.value, 2, "")
+        XCTAssertEqual(2.minutes.unit, NSCalendarUnit.MinuteCalendarUnit, "")
+    }
+    
+    func testSecond() {
+        XCTAssertEqual(1.second.value, 1, "")
+        XCTAssertEqual(1.second.unit, NSCalendarUnit.SecondCalendarUnit, "")
+    }
+    
+    func testSeconds() {
+        XCTAssertEqual(2.seconds.value, 2, "")
+        XCTAssertEqual(2.seconds.unit, NSCalendarUnit.SecondCalendarUnit, "")
     }
 }

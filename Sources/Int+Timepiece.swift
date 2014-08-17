@@ -23,6 +23,13 @@ public extension Int {
         return month
     }
     
+    var week: Duration {
+        return Duration(value: self, unit: .WeekCalendarUnit)
+    }
+    var weeks: Duration {
+        return week
+    }
+    
     var day: Duration {
         return Duration(value: self, unit: .DayCalendarUnit)
     }

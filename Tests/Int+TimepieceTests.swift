@@ -30,6 +30,15 @@ class IntTestCase: XCTestCase {
         XCTAssertEqual(2.months.unit, NSCalendarUnit.MonthCalendarUnit, "")
     }
     
+    func testWeek() {
+        XCTAssertEqual(1.week.value, 1, "")
+        XCTAssertEqual(1.week.unit, NSCalendarUnit.WeekCalendarUnit, "")
+    }
+    func testWeeks() {
+        XCTAssertEqual(2.weeks.value, 2, "")
+        XCTAssertEqual(2.weeks.unit, NSCalendarUnit.WeekCalendarUnit, "")
+    }
+    
     func testDay() {
         XCTAssertEqual(1.day.value, 1, "")
         XCTAssertEqual(1.day.unit, NSCalendarUnit.DayCalendarUnit, "")

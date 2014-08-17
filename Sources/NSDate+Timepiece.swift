@@ -49,13 +49,23 @@ public extension NSDate {
         return NSCalendar.currentCalendar()
     }
     
-    class func today() -> NSDate {
+    // MARK: - Initialize
+    
+    class func date(#year: Int, month: Int, day: Int, hour: Int = 0, minute: Int = 0, second: Int = 0) -> NSDate {
         let now = NSDate()
         let components = now.components
-        components.hour = 0
-        components.minute = 0
-        components.second = 0
+        components.year = year
+        components.month = month
+        components.day = day
+        components.hour = hour
+        components.minute = minute
+        components.second = second
         return now.calendar.dateFromComponents(components)
+    }
+    
+    class func today() -> NSDate {
+        let now = NSDate()
+        return NSDate.date(year: now.year, month: now.month, day: now.day)
     }
     
     class func yesterday() -> NSDate {

@@ -57,6 +57,10 @@ class NSDateTestCase: XCTestCase {
         XCTAssertEqual(birthday.second, 0, "")
     }
     
+    func testDateWithYearAndMonthAndDayAndHourAndMinuteAndSecond() {
+        XCTAssertEqual(NSDate.date(year: 1987, month: 6, day: 2), birthday, "")
+    }
+    
     func testToday() {
         let components = calendar.components(.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit | .HourCalendarUnit | .MinuteCalendarUnit | .SecondCalendarUnit, fromDate: now)
         components.hour = 0

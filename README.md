@@ -13,6 +13,8 @@ let nextWeek = 1.week.later
 let yearBeforeLast = 2.years.ago
 
 // Initialize
+let birthday = NSDate.date(year: 1987, month: 6, day: 2)
+let firstCommitDate = NSDate.date(year: 2014, month: 8, day: 15, hour: 20, minute: 25, second: 43)
 let today = NSDate.today()
 let tomorrow = NSDate.tomorrow()
 let yesterday = NSDate.yesterday()

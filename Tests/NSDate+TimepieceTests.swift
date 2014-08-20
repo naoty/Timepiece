@@ -89,4 +89,34 @@ class NSDateTestCase: XCTestCase {
         let tomorrow = calendar.dateFromComponents(components)
         XCTAssertEqual(NSDate.tomorrow(), tomorrow, "")
     }
+    
+    func testChange() {
+        XCTAssertEqual(now.change(year: 2000).year, 2000, "")
+        XCTAssertEqual(now.change(month: 6).month, 6, "")
+        XCTAssertEqual(now.change(day: 15).day, 15, "")
+        XCTAssertEqual(now.change(hour: 9).hour, 9, "")
+        XCTAssertEqual(now.change(minute: 30).minute, 30, "")
+        XCTAssertEqual(now.change(second: 45).second, 45, "")
+    }
+    
+    func testBeginningOf() {
+        XCTAssertEqual(now.beginningOfYear.month, 1, "")
+        XCTAssertEqual(now.beginningOfMonth.day, 1, "")
+        XCTAssertEqual(now.beginningOfDay.hour, 0, "")
+        XCTAssertEqual(now.beginningOfHour.minute, 0, "")
+        XCTAssertEqual(now.beginningOfMinute.second, 0, "")
+    }
+    
+    func testEndOf() {
+        XCTAssertEqual(now.endOfYear.month, 12, "")
+        XCTAssertEqual(now.endOfDay.hour, 23, "")
+        XCTAssertEqual(now.endOfHour.minute, 59, "")
+        XCTAssertEqual(now.endOfMinute.second, 59, "")
+    }
+    
+    func testEndOfMonth() {
+        // Leap year
+        let date = NSDate.date(year: 2012, month: 2, day: 1)
+        XCTAssertEqual(date.endOfMonth.day, 29, "")
+    }
 }

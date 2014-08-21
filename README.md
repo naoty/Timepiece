@@ -33,7 +33,17 @@ TODO
 
 ## Installation
 
-TODO
+1. Clone this repository as submodule into your project.
+2. On Xcode, drag and drop Timepiece.xcodeproj into your project tree.
+3. Add Timepiece module into the target dependencies. If you follow up to this step, your xcode will be like a below screenshot.
+4. Import Timepiece module.
+
+```swift
+import UIKit
+import Timepiece // Add this line
+```
+
+![installation](installation.png)
 
 ## Contribution
 

@@ -12,7 +12,7 @@ import XCTest
 class NSDateTestCase: XCTestCase {
     let now = NSDate()
     let calendar = NSCalendar.currentCalendar()
-    var birthday: NSDate {
+    var birthday: NSDate! {
         let components = NSDateComponents()
         components.year = 1987
         components.month = 6
@@ -67,7 +67,7 @@ class NSDateTestCase: XCTestCase {
         components.minute = 0
         components.second = 0
         let today = calendar.dateFromComponents(components)
-        XCTAssertEqual(NSDate.today(), today, "")
+        XCTAssertEqual(NSDate.today(), today!, "")
     }
     
     func testYesterday() {
@@ -77,7 +77,7 @@ class NSDateTestCase: XCTestCase {
         components.minute = 0
         components.second = 0
         let yesterday = calendar.dateFromComponents(components)
-        XCTAssertEqual(NSDate.yesterday(), yesterday, "")
+        XCTAssertEqual(NSDate.yesterday(), yesterday!, "")
     }
     
     func testTomorrow() {
@@ -87,7 +87,7 @@ class NSDateTestCase: XCTestCase {
         components.minute = 0
         components.second = 0
         let tomorrow = calendar.dateFromComponents(components)
-        XCTAssertEqual(NSDate.tomorrow(), tomorrow, "")
+        XCTAssertEqual(NSDate.tomorrow(), tomorrow!, "")
     }
     
     func testChange() {

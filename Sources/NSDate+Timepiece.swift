@@ -73,7 +73,7 @@ public extension NSDate {
     
     // MARK: - Initialize by setting components
     
-    func change(year: Int? = nil, month: Int? = nil, day: Int? = nil, hour: Int? = nil, minute: Int? = nil, second: Int? = nil) -> NSDate {
+    func change(year: Int? = nil, month: Int? = nil, day: Int? = nil, hour: Int? = nil, minute: Int? = nil, second: Int? = nil) -> NSDate! {
         let components = self.components
         components.year = year ?? self.year
         components.month = month ?? self.month

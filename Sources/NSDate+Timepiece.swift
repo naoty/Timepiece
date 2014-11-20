@@ -9,11 +9,11 @@
 import Foundation
 
 public func + (lhs: NSDate, rhs: Duration) -> NSDate {
-    return NSCalendar.currentCalendar().dateByAddingUnit(rhs.unit, value: rhs.value, toDate: lhs, options: .SearchBackwards)
+    return NSCalendar.currentCalendar().dateByAddingUnit(rhs.unit, value: rhs.value, toDate: lhs, options: .SearchBackwards)!
 }
 
 public func - (lhs: NSDate, rhs: Duration) -> NSDate {
-    return NSCalendar.currentCalendar().dateByAddingUnit(rhs.unit, value: -rhs.value, toDate: lhs, options: .SearchBackwards)
+    return NSCalendar.currentCalendar().dateByAddingUnit(rhs.unit, value: -rhs.value, toDate: lhs, options: .SearchBackwards)!
 }
 
 public extension NSDate {
@@ -81,7 +81,7 @@ public extension NSDate {
         components.hour = hour ?? self.hour
         components.minute = minute ?? self.minute
         components.second = second ?? self.second
-        return calendar.dateFromComponents(components);
+        return calendar.dateFromComponents(components)
     }
     
     // MARK: - Initialize a date at beginning/end of each units

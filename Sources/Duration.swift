@@ -14,11 +14,11 @@ public class Duration {
     private let calendar = NSCalendar.currentCalendar()
     
     public var ago: NSDate {
-        return calendar.dateByAddingUnit(unit, value: -value, toDate: NSDate(), options: .SearchBackwards)
+        return calendar.dateByAddingUnit(unit, value: -value, toDate: NSDate(), options: .SearchBackwards)!
     }
     
     public var later: NSDate {
-        return calendar.dateByAddingUnit(unit, value: value, toDate: NSDate(), options: .SearchBackwards)
+        return calendar.dateByAddingUnit(unit, value: value, toDate: NSDate(), options: .SearchBackwards)!
     }
     
     public init(value: Int, unit: NSCalendarUnit) {

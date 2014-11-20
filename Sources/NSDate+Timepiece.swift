@@ -27,6 +27,10 @@ public extension NSDate {
         return components.month
     }
     
+    var weekday: Int {
+        return components.weekday
+    }
+    
     var day: Int {
         return components.day
     }
@@ -44,7 +48,7 @@ public extension NSDate {
     }
     
     private var components: NSDateComponents {
-        return calendar.components(.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit | .HourCalendarUnit | .MinuteCalendarUnit | .SecondCalendarUnit, fromDate: self)
+        return calendar.components(.YearCalendarUnit | .MonthCalendarUnit | .WeekdayCalendarUnit | .DayCalendarUnit | .HourCalendarUnit | .MinuteCalendarUnit | .SecondCalendarUnit, fromDate: self)
     }
     
     private var calendar: NSCalendar {
@@ -82,6 +86,10 @@ public extension NSDate {
         components.minute = minute ?? self.minute
         components.second = second ?? self.second
         return calendar.dateFromComponents(components)
+    }
+    
+    func change(#weekday: Int) -> NSDate! {
+        return self - (self.weekday - weekday).days
     }
     
     // MARK: - Initialize a date at beginning/end of each units

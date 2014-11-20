@@ -99,6 +99,10 @@ class NSDateTestCase: XCTestCase {
         XCTAssertEqual(now.change(second: 45).second, 45, "")
     }
     
+    func testChangeWeekday() {
+        XCTAssertEqual(now.change(weekday: 1).weekday, 1, "")
+    }
+    
     func testBeginningOf() {
         XCTAssertEqual(now.beginningOfYear.month, 1, "")
         XCTAssertEqual(now.beginningOfMonth.day, 1, "")

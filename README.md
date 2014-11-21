@@ -1,6 +1,6 @@
 # Timepiece
 
-Swift extensions to calculate time
+Swift extensions to access dates in an intuitive way
 
 ## Demo
 
@@ -33,17 +33,11 @@ TODO
 
 ## Installation
 
-1. Clone this repository as submodule into your project.
-2. On Xcode, drag and drop Timepiece.xcodeproj into your project tree.
-3. Add Timepiece module into the target dependencies. If you follow up to this step, your xcode will be like a below screenshot.
-4. Import Timepiece module.
+Timepiece is available through [Carthage](https://github.com/Carthage/Carthage). To install it, simply add the following line to your Cartfile.
 
-```swift
-import UIKit
-import Timepiece // Add this line
 ```
-
-![installation](installation.png)
+github "naoty/Timepiece"
+```
 
 ## Contribution
 

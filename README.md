@@ -2,34 +2,39 @@
 
 Swift extensions to access dates in an intuitive way
 
-## Demo
+## Usage
+
+### Add durations to date
 
 ```swift
-// Calculate
 let now = NSDate()
-let dayAfterTomorrow = now + 2.days
-let lastMonth = now - 1.month
+let nextWeek = now + 1.week
+let dayBeforeYesterday = now - 2.days
 
-// Initialize
-let birthday = NSDate.date(year: 1987, month: 6, day: 2)
-let firstCommitDate = NSDate.date(year: 2014, month: 8, day: 15, hour: 20, minute: 25, second: 43)
+// shortcuts
 let today = NSDate.today()
 let tomorrow = NSDate.tomorrow()
 let yesterday = NSDate.yesterday()
+```
 
-// Initialize from Int
-let nextWeek = 1.week.later
-let yearBeforeLast = 2.years.ago
+### Initialize by specifying date components
 
-// Initialize by changing components of another date
+```swift
+let birthday = NSDate.date(year: 1987, month: 6, day: 2)
+let firstCommitDate = NSDate.date(year: 2014, month: 8, day: 15, hour: 20, minute: 25, second: 43)
+```
+
+### Initialize by changing date components
+
+```swift
+let now = NSDate()
 let christmas = now.change(month: 12, day: 25)
+let thisSunday = now.change(weekday: 1)
+
+// shortcuts
 let newYearDay = now.beginningOfYear
 let timeLimit = now.endOfHour
 ```
-
-## Usage
-
-TODO
 
 ## Installation
 
@@ -54,4 +59,3 @@ Timepiece is available under the MIT license. See the LICENSE file for more info
 ## Author
 
 [naoty](https://github.com/naoty)
-

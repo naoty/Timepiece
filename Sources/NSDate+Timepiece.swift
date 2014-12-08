@@ -77,6 +77,9 @@ public extension NSDate {
     
     // MARK: - Initialize by setting components
     
+    /**
+        Initialize a date by changing date components of the receiver.
+    */
     func change(year: Int? = nil, month: Int? = nil, day: Int? = nil, hour: Int? = nil, minute: Int? = nil, second: Int? = nil) -> NSDate! {
         let components = self.components
         components.year = year ?? self.year
@@ -88,6 +91,9 @@ public extension NSDate {
         return calendar.dateFromComponents(components)
     }
     
+    /**
+        Initialize a date by changing the weekday of the receiver.
+    */
     func change(#weekday: Int) -> NSDate! {
         return self - (self.weekday - weekday).days
     }

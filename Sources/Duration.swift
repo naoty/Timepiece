@@ -13,10 +13,16 @@ public class Duration {
     public let unit: NSCalendarUnit
     private let calendar = NSCalendar.currentCalendar()
     
+    /**
+        Initialize a date before a duration.
+    */
     public var ago: NSDate {
         return calendar.dateByAddingUnit(unit, value: -value, toDate: NSDate(), options: .SearchBackwards)!
     }
     
+    /**
+        Initialize a date after a duration.
+    */
     public var later: NSDate {
         return calendar.dateByAddingUnit(unit, value: value, toDate: NSDate(), options: .SearchBackwards)!
     }

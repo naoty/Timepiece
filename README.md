@@ -9,12 +9,16 @@ Swift extensions to access dates in an intuitive way
 ```swift
 let now = NSDate()
 let nextWeek = now + 1.week
-let dayBeforeYesterday = now - 2.days
+let dayAfterTomorrow = now + 2.days
 
-// shortcuts
+// shortcuts #1
 let today = NSDate.today()
 let tomorrow = NSDate.tomorrow()
 let yesterday = NSDate.yesterday()
+
+// shortcuts #2
+let dayBeforeYesterday = 2.days.ago
+let tokyoOlympicYear = 5.years.later
 ```
 
 ### Initialize by specifying date components

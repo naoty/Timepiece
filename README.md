@@ -42,10 +42,11 @@ let timeLimit = now.endOfHour
 
 ## Installation
 
-Timepiece is available through [Carthage](https://github.com/Carthage/Carthage). To install it, simply add the following line to your Cartfile.
+SwiftCSV is available through [CocoaPods](http://cocoapods.org), to install it simply add the following line to your Podfile:
 
-```
-github "naoty/Timepiece"
+```ruby
+platform :ios, "8.0"
+pod "Timepiece"
 ```
 
 ## Contribution

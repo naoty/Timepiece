@@ -42,7 +42,7 @@ let timeLimit = now.endOfHour
 
 ## Installation
 
-SwiftCSV is available through [CocoaPods](http://cocoapods.org), to install it simply add the following line to your Podfile:
+Timepiece is available through [CocoaPods](http://cocoapods.org), to install it simply add the following line to your Podfile:
 
 ```ruby
 platform :ios, "8.0"

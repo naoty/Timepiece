@@ -40,11 +40,14 @@ let newYearDay = now.beginningOfYear
 let timeLimit = now.endOfHour
 ```
 
-### Format dates
+### Format and parse
 
 ```swift
-5.minutes.later.stringFromFormat("yyyy-mm-dd HH:MM:SS")
-//=> "2015-03-01 11:55:00"
+5.minutes.later.stringFromFormat("yyyy-MM-dd HH:mm:SS")
+//=> "2015-03-01 12:05:00"
+
+"1987-06-02".dateFromFormat("yyyy-MM-dd")
+//=> NSDate.date(year: 1987, month: 6, day: 2)
 ```
 
 ## Installation

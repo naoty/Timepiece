@@ -57,9 +57,13 @@ public extension NSDate {
     
     // MARK: - Initialize
     
-    class func date(#year: Int, month: Int, day: Int, hour: Int = 0, minute: Int = 0, second: Int = 0) -> NSDate {
+    class func date(#year: Int, month: Int, day: Int, hour: Int, minute: Int, second: Int) -> NSDate {
         let now = NSDate()
         return now.change(year: year, month: month, day: day, hour: hour, minute: minute, second: second)
+    }
+    
+    class func date(#year: Int, month: Int, day: Int) -> NSDate {
+        return NSDate.date(year: year, month: month, day: day, hour: 0, minute: 0, second: 0)
     }
     
     class func today() -> NSDate {

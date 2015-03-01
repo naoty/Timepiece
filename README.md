@@ -1,6 +1,6 @@
 # Timepiece
 
-Swift extensions to access dates in an intuitive way
+Intuitive NSDate extensions in Swift
 
 ## Usage
 

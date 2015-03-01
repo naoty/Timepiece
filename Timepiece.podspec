@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "Timepiece"
-  s.version      = "0.1.0"
-  s.summary      = "Swift extensions to access dates in an intuitive way"
+  s.version      = "0.2.0"
+  s.summary      = "Intuitive NSDate extensions in Swift"
   s.homepage     = "https://github.com/naoty/Timepiece"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Naoto Kaneko" => "naoty.k@gmail.com" }

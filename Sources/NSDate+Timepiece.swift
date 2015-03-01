@@ -135,4 +135,12 @@ public extension NSDate {
     var endOfMinute: NSDate {
         return change(second: 59)
     }
+    
+    // MARK: - Format dates
+    
+    func stringFromFormat(format: String) -> String {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = format
+        return formatter.stringFromDate(self)
+    }
 }

@@ -123,4 +123,9 @@ class NSDateTestCase: XCTestCase {
         let date = NSDate.date(year: 2012, month: 2, day: 1)
         XCTAssertEqual(date.endOfMonth.day, 29, "")
     }
+    
+    func testStringFromFormat() {
+        let timestamp = birthday.stringFromFormat("yyyy-MM-dd HH:mm:SS")
+        XCTAssertEqual(timestamp, "1987-06-02 00:00:00", "")
+    }
 }

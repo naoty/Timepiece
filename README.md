@@ -40,6 +40,13 @@ let newYearDay = now.beginningOfYear
 let timeLimit = now.endOfHour
 ```
 
+### Format dates
+
+```swift
+5.minutes.later.stringFromFormat("yyyy-mm-dd HH:MM:SS")
+//=> "2015-03-01 11:55:00"
+```
+
 ## Installation
 
 Timepiece is available through [CocoaPods](http://cocoapods.org), to install it simply add the following line to your Podfile:

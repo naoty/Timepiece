@@ -62,7 +62,7 @@ class NSDateTestCase: XCTestCase {
     }
     
     func testToday() {
-        let components = calendar.components(.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit | .HourCalendarUnit | .MinuteCalendarUnit | .SecondCalendarUnit, fromDate: now)
+        let components = calendar.components(.CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond, fromDate: now)
         components.hour = 0
         components.minute = 0
         components.second = 0
@@ -71,7 +71,7 @@ class NSDateTestCase: XCTestCase {
     }
     
     func testYesterday() {
-        let components = calendar.components(.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit | .HourCalendarUnit | .MinuteCalendarUnit | .SecondCalendarUnit, fromDate: now)
+        let components = calendar.components(.CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond, fromDate: now)
         components.day = now.day - 1
         components.hour = 0
         components.minute = 0
@@ -81,7 +81,7 @@ class NSDateTestCase: XCTestCase {
     }
     
     func testTomorrow() {
-        let components = calendar.components(.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit | .HourCalendarUnit | .MinuteCalendarUnit | .SecondCalendarUnit, fromDate: now)
+        let components = calendar.components(.CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond, fromDate: now)
         components.day = now.day + 1
         components.hour = 0
         components.minute = 0

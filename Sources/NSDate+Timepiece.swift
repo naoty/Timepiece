@@ -48,7 +48,7 @@ public extension NSDate {
     }
     
     private var components: NSDateComponents {
-        return calendar.components(.YearCalendarUnit | .MonthCalendarUnit | .WeekdayCalendarUnit | .DayCalendarUnit | .HourCalendarUnit | .MinuteCalendarUnit | .SecondCalendarUnit, fromDate: self)
+        return calendar.components(.CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitWeekday | .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond, fromDate: self)
     }
     
     private var calendar: NSCalendar {
@@ -115,7 +115,7 @@ public extension NSDate {
         return change(day: 1, hour: 0, minute: 0, second: 0)
     }
     var endOfMonth: NSDate {
-        let lastDay = calendar.rangeOfUnit(.DayCalendarUnit, inUnit: .MonthCalendarUnit, forDate: self).length
+        let lastDay = calendar.rangeOfUnit(.CalendarUnitDay, inUnit: .CalendarUnitMonth, forDate: self).length
         return change(day: lastDay, hour: 23, minute: 59, second: 59)
     }
     

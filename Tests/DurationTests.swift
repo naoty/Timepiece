@@ -10,7 +10,7 @@ import Timepiece
 import XCTest
 
 class DurationTestCase: XCTestCase {
-    let duration = Duration(value: 1, unit: .DayCalendarUnit)
+    let duration = Duration(value: 1, unit: .CalendarUnitDay)
     
     func testAgo() {
         let oneDayMinus = NSDate() - 1.day

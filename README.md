@@ -1,6 +1,5 @@
 # Timepiece
-
-Intuitive NSDate extensions in Swift
+[![Version](http://img.shields.io/cocoapods/v/Timepiece.svg?style=flat)](http://cocoadocs.org/docsets/Timepiece) [![Platform](http://img.shields.io/cocoapods/p/Timepiece.svg?style=flat)](http://cocoadocs.org/docsets/Timepiece)
 
 ## Usage
 

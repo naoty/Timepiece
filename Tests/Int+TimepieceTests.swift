@@ -32,11 +32,11 @@ class IntTestCase: XCTestCase {
     
     func testWeek() {
         XCTAssertEqual(1.week.value, 1, "")
-        XCTAssertEqual(1.week.unit, NSCalendarUnit.CalendarUnitWeekday, "")
+        XCTAssertEqual(1.week.unit, NSCalendarUnit.CalendarUnitWeekOfYear, "")
     }
     func testWeeks() {
         XCTAssertEqual(2.weeks.value, 2, "")
-        XCTAssertEqual(2.weeks.unit, NSCalendarUnit.CalendarUnitWeekday, "")
+        XCTAssertEqual(2.weeks.unit, NSCalendarUnit.CalendarUnitWeekOfYear, "")
     }
     
     func testDay() {

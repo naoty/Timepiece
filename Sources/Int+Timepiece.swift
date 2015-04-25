@@ -24,7 +24,7 @@ public extension Int {
     }
     
     var week: Duration {
-        return Duration(value: self, unit: .CalendarUnitWeekday)
+        return Duration(value: self, unit: .CalendarUnitWeekOfYear)
     }
     var weeks: Duration {
         return week

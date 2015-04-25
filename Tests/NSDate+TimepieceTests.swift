@@ -24,12 +24,19 @@ class NSDateTestCase: XCTestCase {
     }
     
     func testPlus() {
-        let nextWeek = calendar.dateByAddingUnit(.CalendarUnitWeekday, value: 1, toDate: now, options: .SearchBackwards)!
+        let nextDay = calendar.dateByAddingUnit(.CalendarUnitDay, value: 1, toDate: now, options: .SearchBackwards)!
+        XCTAssertEqual(now + 1.day, nextDay, "")
+        
+        let nextWeek = calendar.dateByAddingUnit(.CalendarUnitWeekOfYear, value: 1, toDate: now, options: .SearchBackwards)!
         XCTAssertEqual(now + 1.week, nextWeek, "")
     }
     
+    
     func testMinus() {
-        let lastWeek = calendar.dateByAddingUnit(.CalendarUnitWeekday, value: -1, toDate: now, options: .SearchBackwards)!
+        let lastDay = calendar.dateByAddingUnit(.CalendarUnitDay, value: -1, toDate: now, options: .SearchBackwards)!
+        XCTAssertEqual(now - 1.day, lastDay, "")
+        
+        let lastWeek = calendar.dateByAddingUnit(.CalendarUnitWeekOfYear, value: -1, toDate: now, options: .SearchBackwards)!
         XCTAssertEqual(now - 1.week, lastWeek, "")
     }
     

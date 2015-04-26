@@ -8,6 +8,10 @@
 
 import Foundation
 
+prefix func - (duration: Duration) -> (Duration) {
+    return Duration(value: -duration.value, unit: duration.unit)
+}
+
 public class Duration {
     public let value: Int
     public let unit: NSCalendarUnit
@@ -17,14 +21,14 @@ public class Duration {
         Initialize a date before a duration.
     */
     public var ago: NSDate {
-        return calendar.dateByAddingUnit(unit, value: -value, toDate: NSDate(), options: .SearchBackwards)!
+        return calendar.dateByAddingDuration(-self, toDate: NSDate(), options: .SearchBackwards)!
     }
     
     /**
         Initialize a date after a duration.
     */
     public var later: NSDate {
-        return calendar.dateByAddingUnit(unit, value: value, toDate: NSDate(), options: .SearchBackwards)!
+        return calendar.dateByAddingDuration(self, toDate: NSDate(), options: .SearchBackwards)!
     }
     
     public init(value: Int, unit: NSCalendarUnit) {

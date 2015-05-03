@@ -40,6 +40,26 @@ class NSDateTestCase: XCTestCase {
         XCTAssertEqual(now - 1.week, lastWeek, "")
     }
     
+    func testEqual() {
+        let date1 = NSDate.date(year: 2015, month: 5, day: 1)
+        let date2 = "2015-05-01".dateFromFormat("yyyy-MM-dd")
+        let date3 = date1 - 1.second
+
+        XCTAssertEqual(date1 == date2, true, "")
+        XCTAssertEqual(date1 != date3, true, "")
+    }
+
+    func testCompare() {
+        let date1 = NSDate.date(year: 2015, month: 5, day: 1)
+        let date2 = date1 + 1.second
+        let date3 = date1 - 1.second
+
+        XCTAssertEqual(date1 < date2, true, "")
+        XCTAssertEqual(date1 <= date1, true, "")
+        XCTAssertEqual(date1 > date3, true, "")
+        XCTAssertEqual(date1 >= date1, true, "")
+    }
+
     func testYear() {
         XCTAssertEqual(birthday.year, 1987, "")
     }

@@ -49,6 +49,18 @@ let timeLimit = now.endOfHour
 //=> NSDate.date(year: 1987, month: 6, day: 2)
 ```
 
+### Compare dates
+
+```swift
+if (birthday == 28.years.ago) {
+    // ...
+}
+
+if (lastCommitDate > 1.week.ago) {
+    // ...
+}
+```
+
 ## Installation
 
 Timepiece is available through [CocoaPods](http://cocoapods.org), to install it simply add the following line to your Podfile:

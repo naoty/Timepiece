@@ -23,12 +23,7 @@ public func - (lhs: NSDate, rhs: Duration) -> NSDate {
 extension NSDate: Equatable {}
 
 public func == (lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.year == rhs.year &&
-        lhs.month == rhs.month &&
-        lhs.day == rhs.day &&
-        lhs.hour == rhs.hour &&
-        lhs.minute == rhs.minute &&
-        lhs.second == rhs.second
+    return lhs.isEqualToDate(rhs)
 }
 
 // MARK: - Comparable
@@ -36,22 +31,7 @@ public func == (lhs: NSDate, rhs: NSDate) -> Bool {
 extension NSDate: Comparable {}
 
 public func < (lhs: NSDate, rhs: NSDate) -> Bool {
-    if lhs.year != rhs.year {
-        return lhs.year < rhs.year
-    }
-    if lhs.month != rhs.month {
-        return lhs.month < rhs.month
-    }
-    if lhs.day != rhs.day {
-        return lhs.day < rhs.day
-    }
-    if lhs.hour != rhs.hour {
-        return lhs.hour < rhs.hour
-    }
-    if lhs.minute != rhs.minute {
-        return lhs.minute < rhs.minute
-    }
-    return lhs.second < rhs.second
+    return lhs.compare(rhs) == .OrderedAscending
 }
 
 // MARK: -

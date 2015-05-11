@@ -18,6 +18,10 @@ public func - (lhs: NSDate, rhs: Duration) -> NSDate {
     return NSCalendar.currentCalendar().dateByAddingDuration(-rhs, toDate: lhs, options: .SearchBackwards)!
 }
 
+public func - (lhs: NSDate, rhs: NSDate) -> NSTimeInterval {
+    return lhs.timeIntervalSinceDate(rhs)
+}
+
 // MARK: - Equatable
 
 extension NSDate: Equatable {}

@@ -17,7 +17,7 @@ extension NSDateComponents {
         case NSCalendarUnit.CalendarUnitWeekday:
             weekday = duration.value
         case NSCalendarUnit.CalendarUnitWeekOfMonth:
-            weekday = duration.value
+            weekOfMonth = duration.value
         case NSCalendarUnit.CalendarUnitWeekOfYear:
             weekOfYear = duration.value
         case NSCalendarUnit.CalendarUnitHour:

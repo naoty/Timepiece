@@ -22,8 +22,14 @@ class NSTimeIntervalTestCase: XCTestCase {
         XCTAssert(oneMinuteFromNow - now < 61.seconds)
         XCTAssert(oneMinuteFromNow - now > 59.seconds)
         XCTAssert(oneMinuteFromNow - now == 60.seconds)
+        XCTAssert(oneMinuteFromNow - now >= 59.seconds)
+        XCTAssert(oneMinuteFromNow - now >= 60.seconds)
+        XCTAssert(oneMinuteFromNow - now <= 60.seconds)
+        XCTAssert(oneMinuteFromNow - now <= 61.seconds)
         XCTAssert(oneMinuteFromNow - now != 1.seconds)
+        XCTAssertFalse(oneMinuteFromNow - now >= 61.seconds)
+        XCTAssertFalse(oneMinuteFromNow - now <= 59.seconds)
         
-        XCTAssert(oneMinuteFromNow - now == 1.week)
+        XCTAssert(tenWeeksFromNow - now == 10.week)
     }
 }

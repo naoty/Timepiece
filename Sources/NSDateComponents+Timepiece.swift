@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSDateComponents {
+public extension NSDateComponents {
     convenience init(_ duration: Duration) {
         self.init()
         switch duration.unit{

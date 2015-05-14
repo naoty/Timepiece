@@ -31,6 +31,10 @@ public class Duration {
         return calendar.dateByAddingDuration(self, toDate: NSDate(), options: .SearchBackwards)!
     }
     
+    public lazy var interval: NSTimeInterval = { [unowned self] in
+        return self.unit.interval * NSTimeInterval(self.value)
+    }()
+    
     public init(value: Int, unit: NSCalendarUnit) {
         self.value = value
         self.unit = unit

@@ -126,6 +126,14 @@ class NSDateTestCase: XCTestCase {
         XCTAssertEqual(now.change(second: 45).second, 45, "")
     }
     
+    func testTimeIntervalDifference() {
+        let oneMinuteFromNow = now + 1.minute
+        let tenWeeksFromNow = now + 10.weeks
+        
+        XCTAssertEqual(oneMinuteFromNow - now, 60)
+        XCTAssertEqual(tenWeeksFromNow - now, 3600*24*7*10)
+    }
+    
     func testChangeWeekday() {
         XCTAssertEqual(now.change(weekday: 1).weekday, 1, "")
     }

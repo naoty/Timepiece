@@ -15,13 +15,13 @@ class DurationTestCase: XCTestCase {
         let today = NSDate()
         let oneDay = Duration(value: 1, unit: .CalendarUnitDay)
         let yesterday = today - 1.day
-        XCTAssertEqualWithAccuracy(oneDay.ago(today).timeIntervalSince1970, yesterday.timeIntervalSince1970, 0.01, "")
+        XCTAssertEqualWithAccuracy(oneDay.ago(from: today).timeIntervalSince1970, yesterday.timeIntervalSince1970, 0.01, "")
     }
     
     func testLater() {
         let today = NSDate()
         let oneDay = Duration(value: 1, unit: .CalendarUnitDay)
         let tomorrow = today + 1.day
-        XCTAssertEqualWithAccuracy(oneDay.later(today).timeIntervalSince1970, tomorrow.timeIntervalSince1970, 0.01, "")
+        XCTAssertEqualWithAccuracy(oneDay.later(from: today).timeIntervalSince1970, tomorrow.timeIntervalSince1970, 0.01, "")
     }
 }

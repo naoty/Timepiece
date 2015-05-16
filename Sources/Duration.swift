@@ -21,10 +21,10 @@ public class Duration {
         Initialize a date before a duration.
     */
     public var ago: NSDate {
-        return ago(NSDate())
+        return ago(from: NSDate())
     }
     
-    public func ago(date: NSDate) -> NSDate {
+    public func ago(from date: NSDate) -> NSDate {
         return calendar.dateByAddingDuration(-self, toDate: date, options: .SearchBackwards)!
     }
     
@@ -32,10 +32,10 @@ public class Duration {
         Initialize a date after a duration.
     */
     public var later: NSDate {
-        return later(NSDate())
+        return later(from: NSDate())
     }
     
-    public func later(date: NSDate) -> NSDate {
+    public func later(from date: NSDate) -> NSDate {
         return calendar.dateByAddingDuration(self, toDate: date, options: .SearchBackwards)!
     }
     

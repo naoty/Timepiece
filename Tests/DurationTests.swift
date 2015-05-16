@@ -12,14 +12,16 @@ import XCTest
 class DurationTestCase: XCTestCase {
     
     func testAgo() {
-        let duration = Duration(value: 1, unit: .CalendarUnitDay)
-        let oneDayMinus = NSDate() - 1.day
-        XCTAssertEqualWithAccuracy(duration.ago.timeIntervalSince1970, oneDayMinus.timeIntervalSince1970, 0.01, "")
+        let today = NSDate()
+        let oneDay = Duration(value: 1, unit: .CalendarUnitDay)
+        let yesterday = today - 1.day
+        XCTAssertEqualWithAccuracy(oneDay.ago(today).timeIntervalSince1970, yesterday.timeIntervalSince1970, 0.01, "")
     }
     
     func testLater() {
-        let duration = Duration(value: 1, unit: .CalendarUnitDay)
-        let oneDayPlus = NSDate() + 1.day
-        XCTAssertEqualWithAccuracy(duration.later.timeIntervalSince1970, oneDayPlus.timeIntervalSince1970, 0.01, "")
+        let today = NSDate()
+        let oneDay = Duration(value: 1, unit: .CalendarUnitDay)
+        let tomorrow = today + 1.day
+        XCTAssertEqualWithAccuracy(oneDay.later(today).timeIntervalSince1970, tomorrow.timeIntervalSince1970, 0.01, "")
     }
 }

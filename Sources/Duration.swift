@@ -21,14 +21,22 @@ public class Duration {
         Initialize a date before a duration.
     */
     public var ago: NSDate {
-        return calendar.dateByAddingDuration(-self, toDate: NSDate(), options: .SearchBackwards)!
+        return ago(NSDate())
+    }
+    
+    public func ago(date: NSDate) -> NSDate {
+        return calendar.dateByAddingDuration(-self, toDate: date, options: .SearchBackwards)!
     }
     
     /**
         Initialize a date after a duration.
     */
     public var later: NSDate {
-        return calendar.dateByAddingDuration(self, toDate: NSDate(), options: .SearchBackwards)!
+        return later(NSDate())
+    }
+    
+    public func later(date: NSDate) -> NSDate {
+        return calendar.dateByAddingDuration(self, toDate: date, options: .SearchBackwards)!
     }
     
     public lazy var interval: NSTimeInterval = { [unowned self] in

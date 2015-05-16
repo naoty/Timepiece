@@ -20,6 +20,7 @@
 		DFA183031AEBC81800D95B9B /* NSDateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA183021AEBC81800D95B9B /* NSDateComponents+Timepiece.swift */; };
 		DFA29DB21B03C68000AE149B /* NSCalendarUnit+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA29DB11B03C68000AE149B /* NSCalendarUnit+Timepiece.swift */; };
 		DFA29DB41B03D5F700AE149B /* NSCalendarUnit+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA29DB31B03D5F700AE149B /* NSCalendarUnit+TimepieceTests.swift */; };
+		DFFD0DC51B07A60F00F69BA5 /* DurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD0DC31B07A5F700F69BA5 /* DurationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		DFA183021AEBC81800D95B9B /* NSDateComponents+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateComponents+Timepiece.swift"; sourceTree = "<group>"; };
 		DFA29DB11B03C68000AE149B /* NSCalendarUnit+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCalendarUnit+Timepiece.swift"; sourceTree = "<group>"; };
 		DFA29DB31B03D5F700AE149B /* NSCalendarUnit+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCalendarUnit+TimepieceTests.swift"; sourceTree = "<group>"; };
+		DFFD0DC31B07A5F700F69BA5 /* DurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		3DC61829199E204800FB7AAC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				DFFD0DC31B07A5F700F69BA5 /* DurationTests.swift */,
 				3DC6182C199E26FE00FB7AAC /* Int+TimepieceTests.swift */,
 				3DC61835199F0C0500FB7AAC /* NSDate+TimepieceTests.swift */,
 				3D44533A1AA2C50B00199949 /* String+TimepieceTests.swift */,
@@ -237,6 +240,7 @@
 				3D44533B1AA2C50B00199949 /* String+TimepieceTests.swift in Sources */,
 				3DC61836199F0C0500FB7AAC /* NSDate+TimepieceTests.swift in Sources */,
 				3DC6182E199E270F00FB7AAC /* Int+TimepieceTests.swift in Sources */,
+				DFFD0DC51B07A60F00F69BA5 /* DurationTests.swift in Sources */,
 				DF2115F31B00A0EF00B3AD69 /* NSTimeInterval+TimepieceTests.swift in Sources */,
 				DFA29DB41B03D5F700AE149B /* NSCalendarUnit+TimepieceTests.swift in Sources */,
 			);

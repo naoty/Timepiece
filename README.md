@@ -52,11 +52,11 @@ let timeLimit = now.endOfHour
 ### Compare dates
 
 ```swift
-if (birthday == 28.years.ago) {
+if (lastCommitDate > 1.week.ago) {
     // ...
 }
 
-if (lastCommitDate > 1.week.ago) {
+if (now - lastLoginDate > 1.month) {
     // ...
 }
 ```

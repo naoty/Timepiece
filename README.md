@@ -63,11 +63,18 @@ if (now - lastLoginDate > 1.month) {
 
 ## Installation
 
-Timepiece is available through [CocoaPods](http://cocoapods.org), to install it simply add the following line to your Podfile:
+### CocoaPods
 
 ```ruby
-platform :ios, "8.0"
+# Podfile
 pod "Timepiece"
+```
+
+### Carthage
+
+```ruby
+# Cartfile
+github "naoty/Timepiece"
 ```
 
 ## Contribution

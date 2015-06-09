@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3DC6180E199E1F8400FB7AAC"
-               BuildableName = "Timepiece.framework"
-               BlueprintName = "Timepiece"
+               BlueprintIdentifier = "3DE7CFAF1B27126F00E0F331"
+               BuildableName = "Timepiece OSX.framework"
+               BlueprintName = "Timepiece OSX"
                ReferencedContainer = "container:Timepiece.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "NO"
+            buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3DC61819199E1F8400FB7AAC"
-               BuildableName = "TimepieceTests.xctest"
-               BlueprintName = "TimepieceTests"
+               BlueprintIdentifier = "3DE7CFB91B27126F00E0F331"
+               BuildableName = "Timepiece OSX Tests.xctest"
+               BlueprintName = "Timepiece OSX Tests"
                ReferencedContainer = "container:Timepiece.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3DC61819199E1F8400FB7AAC"
-               BuildableName = "TimepieceTests.xctest"
-               BlueprintName = "TimepieceTests"
+               BlueprintIdentifier = "3DE7CFB91B27126F00E0F331"
+               BuildableName = "Timepiece OSX Tests.xctest"
+               BlueprintName = "Timepiece OSX Tests"
                ReferencedContainer = "container:Timepiece.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +56,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3DC6180E199E1F8400FB7AAC"
-            BuildableName = "Timepiece.framework"
-            BlueprintName = "Timepiece"
+            BlueprintIdentifier = "3DE7CFAF1B27126F00E0F331"
+            BuildableName = "Timepiece OSX.framework"
+            BlueprintName = "Timepiece OSX"
             ReferencedContainer = "container:Timepiece.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,9 +75,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3DC6180E199E1F8400FB7AAC"
-            BuildableName = "Timepiece.framework"
-            BlueprintName = "Timepiece"
+            BlueprintIdentifier = "3DE7CFAF1B27126F00E0F331"
+            BuildableName = "Timepiece OSX.framework"
+            BlueprintName = "Timepiece OSX"
             ReferencedContainer = "container:Timepiece.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -93,9 +93,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3DC6180E199E1F8400FB7AAC"
-            BuildableName = "Timepiece.framework"
-            BlueprintName = "Timepiece"
+            BlueprintIdentifier = "3DE7CFAF1B27126F00E0F331"
+            BuildableName = "Timepiece OSX.framework"
+            BlueprintName = "Timepiece OSX"
             ReferencedContainer = "container:Timepiece.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3DE7CFAF1B27126F00E0F331"
-               BuildableName = "Timepiece OSX.framework"
+               BuildableName = "Timepiece.framework"
                BlueprintName = "Timepiece OSX"
                ReferencedContainer = "container:Timepiece.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DE7CFAF1B27126F00E0F331"
-            BuildableName = "Timepiece OSX.framework"
+            BuildableName = "Timepiece.framework"
             BlueprintName = "Timepiece OSX"
             ReferencedContainer = "container:Timepiece.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DE7CFAF1B27126F00E0F331"
-            BuildableName = "Timepiece OSX.framework"
+            BuildableName = "Timepiece.framework"
             BlueprintName = "Timepiece OSX"
             ReferencedContainer = "container:Timepiece.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DE7CFAF1B27126F00E0F331"
-            BuildableName = "Timepiece OSX.framework"
+            BuildableName = "Timepiece.framework"
             BlueprintName = "Timepiece OSX"
             ReferencedContainer = "container:Timepiece.xcodeproj">
          </BuildableReference>

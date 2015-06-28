@@ -142,6 +142,21 @@ public extension NSDate {
         let lastDay = calendar.rangeOfUnit(.CalendarUnitDay, inUnit: .CalendarUnitMonth, forDate: self).length
         return change(day: lastDay, hour: 23, minute: 59, second: 59)
     }
+	
+	var beginningOfWeek: NSDate {
+		var daysDiff = weekday - calendar.firstWeekday
+		if daysDiff < 0 {
+			daysDiff = 7 + daysDiff
+		}
+		return beginningOfDay - daysDiff.days
+	}
+	var endOfWeek: NSDate {
+		var daysDiff = (calendar.firstWeekday - 1) - weekday
+		if daysDiff < 0 {
+			daysDiff = 7 + daysDiff
+		}
+		return endOfDay + daysDiff.days
+	}
     
     var beginningOfDay: NSDate {
         return change(hour: 0, minute: 0, second: 0)

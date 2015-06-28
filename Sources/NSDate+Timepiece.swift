@@ -144,17 +144,11 @@ public extension NSDate {
     }
 	
 	var beginningOfWeek: NSDate {
-		var daysDiff = weekday - calendar.firstWeekday
-		if daysDiff < 0 {
-			daysDiff = 7 + daysDiff
-		}
+		var daysDiff = (7 + (weekday - calendar.firstWeekday)) % 7
 		return beginningOfDay - daysDiff.days
 	}
 	var endOfWeek: NSDate {
-		var daysDiff = (calendar.firstWeekday - 1) - weekday
-		if daysDiff < 0 {
-			daysDiff = 7 + daysDiff
-		}
+		var daysDiff = (7 + ((calendar.firstWeekday - 1) - weekday)) % 7
 		return endOfDay + daysDiff.days
 	}
     

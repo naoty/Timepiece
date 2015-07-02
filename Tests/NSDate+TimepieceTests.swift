@@ -145,7 +145,25 @@ class NSDateTestCase: XCTestCase {
         XCTAssertEqual(now.beginningOfHour.minute, 0, "")
         XCTAssertEqual(now.beginningOfMinute.second, 0, "")
     }
-    
+	
+	func testBeginningEndOfWeek() {
+		let systemFirstWeekday = calendar.firstWeekday
+		// Birthday was on tuesday (Tuesday, June 2, 1987)
+		if systemFirstWeekday == 1 {
+			// Weeks start on sunday:
+			XCTAssertEqual(birthday.beginningOfWeek.month, 5, "")
+			XCTAssertEqual(birthday.beginningOfWeek.day, 31, "")
+			XCTAssertEqual(birthday.endOfWeek.month, 6, "")
+			XCTAssertEqual(birthday.endOfWeek.day, 6, "")
+		} else if systemFirstWeekday == 2 {
+			// Weeks start on monday:
+			XCTAssertEqual(birthday.beginningOfWeek.month, 6, "")
+			XCTAssertEqual(birthday.beginningOfWeek.day, 1, "")
+			XCTAssertEqual(birthday.endOfWeek.month, 6, "")
+			XCTAssertEqual(birthday.endOfWeek.day, 7, "")
+		}
+	}
+	
     func testEndOf() {
         XCTAssertEqual(now.endOfYear.month, 12, "")
         XCTAssertEqual(now.endOfDay.hour, 23, "")

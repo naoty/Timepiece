@@ -39,6 +39,15 @@ let newYearDay = now.beginningOfYear
 let timeLimit = now.endOfHour
 ```
 
+### Time zone
+
+```swift
+let now = NSDate()
+let cst = NSTimeZone(name: "CST")!
+let dateInCST = now.beginningOfDay.change(timeZone: cst)
+dateInCST.timeZone //=> CST (CDT) offset -18000 (Daylight)
+```
+
 ### Format and parse
 
 ```swift

@@ -27,11 +27,11 @@ let thisSunday = now.change(weekday: 1)
 let newYearDay = now.beginningOfYear
 let timeLimit = now.endOfHour
 
+//: ### Time zone
+let cst = NSTimeZone(name: "CST")!
+let dateInCST = now.beginningOfDay.change(timeZone: cst)
+dateInCST.timeZone
+
 //: ### Format and parse
 5.minutes.later.stringFromFormat("yyyy-MM-dd HH:mm:SS")
 "1987-06-02".dateFromFormat("yyyy-MM-dd")
-
-//: ### Initialize by changing timezone
-let cst = NSTimeZone(name: "CST")!
-let cstDate = now.change(timeZone: cst)
-cstDate.timeZone

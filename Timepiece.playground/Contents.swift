@@ -30,3 +30,8 @@ let timeLimit = now.endOfHour
 //: ### Format and parse
 5.minutes.later.stringFromFormat("yyyy-MM-dd HH:mm:SS")
 "1987-06-02".dateFromFormat("yyyy-MM-dd")
+
+//: ### Initialize by changing timezone
+let cst = NSTimeZone(name: "CST")!
+let cstDate = now.change(timeZone: cst)
+cstDate.timeZone

@@ -138,6 +138,13 @@ class NSDateTestCase: XCTestCase {
         XCTAssertEqual(now.change(weekday: 1).weekday, 1, "")
     }
     
+    func testChangeTimeZone() {
+        let cst = NSTimeZone(name: "CST")!
+        let cstDate = now.change(timeZone: cst)
+        XCTAssertEqual(cstDate.timeZone, cst, "")
+        XCTAssertNotNil(cstDate.timeZone, "")
+    }
+    
     func testBeginningOf() {
         XCTAssertEqual(now.beginningOfYear.month, 1, "")
         XCTAssertEqual(now.beginningOfMonth.day, 1, "")

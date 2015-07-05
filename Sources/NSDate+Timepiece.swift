@@ -139,11 +139,14 @@ public extension NSDate {
         Initialize a date by changing the time zone of receiver.
     */
     func change(#timeZone: NSTimeZone) -> NSDate! {
-        let calendar = NSCalendar.currentCalendar()
+        let originalTimeZone = calendar.timeZone
         calendar.timeZone = timeZone
         
-        let newDate = calendar.dateFromComponents(components)
+        let newDate = calendar.dateFromComponents(components)!
+        newDate.calendar.timeZone = timeZone
         objc_setAssociatedObject(newDate, &AssociatedKeys.TimeZone, timeZone, UInt(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+        
+        calendar.timeZone = originalTimeZone
         
         return newDate
     }

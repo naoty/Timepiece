@@ -11,6 +11,7 @@ import XCTest
 
 class NSDateTestCase: XCTestCase {
     let now = NSDate()
+    // TODO: Stub calendar's timezone
     let calendar = NSCalendar.currentCalendar()
     var birthday: NSDate! {
         let components = NSDateComponents()
@@ -22,6 +23,7 @@ class NSDateTestCase: XCTestCase {
         components.second = 0
         return calendar.dateFromComponents(components)
     }
+    let cst = NSTimeZone(abbreviation: "CST")!
     
     func testPlus() {
         let nextDay = calendar.dateByAddingUnit(.CalendarUnitDay, value: 1, toDate: now, options: .SearchBackwards)!
@@ -31,8 +33,7 @@ class NSDateTestCase: XCTestCase {
         XCTAssertEqual(now + 1.week, nextWeek, "")
     }
     
-    
-    func testMinus() {
+    func testMinusWithDuration() {
         let lastDay = calendar.dateByAddingUnit(.CalendarUnitDay, value: -1, toDate: now, options: .SearchBackwards)!
         XCTAssertEqual(now - 1.day, lastDay, "")
         
@@ -40,13 +41,34 @@ class NSDateTestCase: XCTestCase {
         XCTAssertEqual(now - 1.week, lastWeek, "")
     }
     
+    func testMinusWithDate() {
+        let date1 = NSDate.date(year: 2015, month: 5, day: 1)
+        let date2 = date1 + 1.hour
+        
+        XCTAssertTrue(date2 - date1 == 1.hour, "")
+    }
+    
+    func testMinusWithDifferentTimeZone() {
+        let date1 = NSDate.date(year: 2015, month: 5, day: 1)
+        let date2 = (date1 + 1.hour).change(timeZone: cst)
+        
+        XCTAssertTrue(date2 - date1 == 1.hour, "")
+    }
+    
     func testEqual() {
         let date1 = NSDate.date(year: 2015, month: 5, day: 1)
         let date2 = "2015-05-01".dateFromFormat("yyyy-MM-dd")
         let date3 = date1 - 1.second
 
-        XCTAssertEqual(date1 == date2, true, "")
-        XCTAssertEqual(date1 != date3, true, "")
+        XCTAssertTrue(date1 == date2, "")
+        XCTAssertTrue(date1 != date3, "")
+    }
+    
+    func testEqualWithDifferentTimeZones() {
+        let date1 = NSDate.date(year: 2015, month: 5, day: 1)
+        let date2 = date1.change(timeZone: cst)
+        
+        XCTAssertTrue(date1 == date2, "")
     }
 
     func testCompare() {
@@ -54,10 +76,21 @@ class NSDateTestCase: XCTestCase {
         let date2 = date1 + 1.second
         let date3 = date1 - 1.second
 
-        XCTAssertEqual(date1 < date2, true, "")
-        XCTAssertEqual(date1 <= date1, true, "")
-        XCTAssertEqual(date1 > date3, true, "")
-        XCTAssertEqual(date1 >= date1, true, "")
+        XCTAssertTrue(date1 < date2, "")
+        XCTAssertTrue(date1 <= date1, "")
+        XCTAssertTrue(date1 > date3, "")
+        XCTAssertTrue(date1 >= date1, "")
+    }
+    
+    func testCompareWithDifferentTimeZones() {
+        let date1 = NSDate.date(year: 2015, month: 5, day: 1)
+        let date2 = (date1 + 1.second).change(timeZone: cst)
+        let date3 = (date1 - 1.second).change(timeZone: cst)
+        
+        XCTAssertTrue(date1 < date2, "")
+        XCTAssertTrue(date1 <= date1, "")
+        XCTAssertTrue(date1 > date3, "")
+        XCTAssertTrue(date1 >= date1, "")
     }
 
     func testYear() {
@@ -139,7 +172,6 @@ class NSDateTestCase: XCTestCase {
     }
     
     func testChangeTimeZone() {
-        let cst = NSTimeZone(name: "CST")!
         let cstDate = now.change(timeZone: cst)
         XCTAssertEqual(cstDate.timeZone, cst, "")
         XCTAssertNotNil(cstDate.timeZone, "")

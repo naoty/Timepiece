@@ -28,7 +28,7 @@ let newYearDay = now.beginningOfYear
 let timeLimit = now.endOfHour
 
 //: ### Time zone
-let cst = NSTimeZone(name: "CST")!
+let cst = NSTimeZone(abbreviation: "CST")!
 let dateInCST = now.beginningOfDay.change(timeZone: cst)
 dateInCST.timeZone
 

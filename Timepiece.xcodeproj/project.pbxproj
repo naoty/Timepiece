@@ -59,7 +59,7 @@
 		3D4453381AA2C4B900199949 /* String+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Timepiece.swift"; sourceTree = "<group>"; };
 		3D44533A1AA2C50B00199949 /* String+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TimepieceTests.swift"; sourceTree = "<group>"; };
 		3DC6180F199E1F8400FB7AAC /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DC6181A199E1F8400FB7AAC /* TimepieceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimepieceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DC6181A199E1F8400FB7AAC /* Timepiece iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Timepiece iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC6182A199E26CD00FB7AAC /* Int+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Timepiece.swift"; sourceTree = "<group>"; };
 		3DC6182C199E26FE00FB7AAC /* Int+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+TimepieceTests.swift"; sourceTree = "<group>"; };
 		3DC61833199F0B2100FB7AAC /* NSDate+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Timepiece.swift"; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				3DC6180F199E1F8400FB7AAC /* Timepiece.framework */,
-				3DC6181A199E1F8400FB7AAC /* TimepieceTests.xctest */,
+				3DC6181A199E1F8400FB7AAC /* Timepiece iOS Tests.xctest */,
 				3DE7CFB01B27126F00E0F331 /* Timepiece.framework */,
 				3DE7CFBA1B27126F00E0F331 /* Timepiece OSX Tests.xctest */,
 			);
@@ -248,7 +248,7 @@
 			);
 			name = "Timepiece iOS Tests";
 			productName = TimepieceTests;
-			productReference = 3DC6181A199E1F8400FB7AAC /* TimepieceTests.xctest */;
+			productReference = 3DC6181A199E1F8400FB7AAC /* Timepiece iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		3DE7CFAF1B27126F00E0F331 /* Timepiece OSX */ = {
@@ -713,6 +713,7 @@
 				3DE7CFC41B27126F00E0F331 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DE7CFC81B27126F00E0F331 /* Build configuration list for PBXNativeTarget "Timepiece OSX Tests" */ = {
 			isa = XCConfigurationList;
@@ -721,6 +722,7 @@
 				3DE7CFC61B27126F00E0F331 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

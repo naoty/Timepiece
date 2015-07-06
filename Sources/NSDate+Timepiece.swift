@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ObjectiveC
 
 // MARK: - Calculation
 
@@ -41,6 +42,10 @@ public func < (lhs: NSDate, rhs: NSDate) -> Bool {
 // MARK: -
 
 public extension NSDate {
+    private struct AssociatedKeys {
+        static var TimeZone = "timepiece_TimeZone"
+    }
+    
     // MARK: - Get components
     
     var year: Int {
@@ -69,6 +74,10 @@ public extension NSDate {
     
     var second: Int {
         return components.second
+    }
+    
+    var timeZone: NSTimeZone {
+        return objc_getAssociatedObject(self, &AssociatedKeys.TimeZone) as? NSTimeZone ?? calendar.timeZone
     }
     
     private var components: NSDateComponents {
@@ -124,6 +133,22 @@ public extension NSDate {
     */
     func change(#weekday: Int) -> NSDate! {
         return self - (self.weekday - weekday).days
+    }
+    
+    /**
+        Initialize a date by changing the time zone of receiver.
+    */
+    func change(#timeZone: NSTimeZone) -> NSDate! {
+        let originalTimeZone = calendar.timeZone
+        calendar.timeZone = timeZone
+        
+        let newDate = calendar.dateFromComponents(components)!
+        newDate.calendar.timeZone = timeZone
+        objc_setAssociatedObject(newDate, &AssociatedKeys.TimeZone, timeZone, UInt(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+        
+        calendar.timeZone = originalTimeZone
+        
+        return newDate
     }
     
     // MARK: - Initialize a date at beginning/end of each units

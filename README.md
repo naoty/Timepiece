@@ -61,13 +61,9 @@ dateInCST.timeZone //=> CST (CDT) offset -18000 (Daylight)
 ### Compare dates
 
 ```swift
-if (lastCommitDate > 1.week.ago) {
-    // ...
-}
-
-if (now - lastLoginDate > 1.month) {
-    // ...
-}
+firstCommitDate < 1.year.ago // false
+(1.year.ago...now).contains(firstCommitDate) // true
+firstCommitDate > now // false
 ```
 
 ## Installation
@@ -85,6 +81,10 @@ pod "Timepiece"
 # Cartfile
 github "naoty/Timepiece"
 ```
+
+## Swift 2.0
+
+We provide the support for Swift 2.0 at `swift-2.0` branch.
 
 ## Contribution
 

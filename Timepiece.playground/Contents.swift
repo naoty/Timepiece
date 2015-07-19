@@ -35,3 +35,8 @@ dateInCST.timeZone
 //: ### Format and parse
 5.minutes.later.stringFromFormat("yyyy-MM-dd HH:mm:SS")
 "1987-06-02".dateFromFormat("yyyy-MM-dd")
+
+//: ### Compare dates
+firstCommitDate < 1.year.ago
+(1.year.ago...now).contains(firstCommitDate)
+firstCommitDate > now

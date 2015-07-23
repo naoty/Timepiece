@@ -39,6 +39,12 @@ public class Duration {
         return calendar.dateByAddingDuration(self, toDate: date, options: .SearchBackwards)!
     }
     
+    /**
+        This conversion is deprecated in 0.4.1 and will be obsoleted in 0.5.0.
+    
+        This operation is performed under incorrect assumption that 1 month is always equal to 30 days.
+    */
+    @availability(*, deprecated=0.4.1)
     public lazy var interval: NSTimeInterval = { [unowned self] in
         return self.unit.interval * NSTimeInterval(self.value)
     }()

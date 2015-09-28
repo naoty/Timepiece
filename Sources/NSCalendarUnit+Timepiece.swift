@@ -15,7 +15,6 @@ import Foundation
     Therefore, The comparison between Duration and NSTimeInterval is also incorrect.
 */
 public extension NSCalendarUnit {
-    @available(*, deprecated=0.4.1)
     public var interval: NSTimeInterval {
         switch self {
         case NSCalendarUnit.Nanosecond:     return 1e-9                 // 1e-9 second

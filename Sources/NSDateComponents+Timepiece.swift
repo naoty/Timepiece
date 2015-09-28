@@ -12,23 +12,23 @@ public extension NSDateComponents {
     convenience init(_ duration: Duration) {
         self.init()
         switch duration.unit{
-        case NSCalendarUnit.CalendarUnitDay:
+        case NSCalendarUnit.Day:
             day = duration.value
-        case NSCalendarUnit.CalendarUnitWeekday:
+        case NSCalendarUnit.Weekday:
             weekday = duration.value
-        case NSCalendarUnit.CalendarUnitWeekOfMonth:
+        case NSCalendarUnit.WeekOfMonth:
             weekOfMonth = duration.value
-        case NSCalendarUnit.CalendarUnitWeekOfYear:
+        case NSCalendarUnit.WeekOfYear:
             weekOfYear = duration.value
-        case NSCalendarUnit.CalendarUnitHour:
+        case NSCalendarUnit.Hour:
             hour = duration.value
-        case NSCalendarUnit.CalendarUnitMinute:
+        case NSCalendarUnit.Minute:
             minute = duration.value
-        case NSCalendarUnit.CalendarUnitMonth:
+        case NSCalendarUnit.Month:
             month = duration.value
-        case NSCalendarUnit.CalendarUnitSecond:
+        case NSCalendarUnit.Second:
             second = duration.value
-        case NSCalendarUnit.CalendarUnitYear:
+        case NSCalendarUnit.Year:
             year = duration.value
         default:
             () // unsupported / ignore

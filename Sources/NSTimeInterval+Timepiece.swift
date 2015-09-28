@@ -15,62 +15,62 @@ import Foundation
     Therefore, The comparison between Duration and NSTimeInterval is also incorrect.
 */
 
-@availability(*, deprecated=0.4.1)
+@available(*, deprecated=0.4.1)
 public func < (lhs: NSTimeInterval, rhs: Duration) -> Bool {
     return lhs < rhs.interval
 }
 
-@availability(*, deprecated=0.4.1)
+@available(*, deprecated=0.4.1)
 public func < (lhs: Duration, rhs: NSTimeInterval) -> Bool {
     return lhs.interval < rhs
 }
 
-@availability(*, deprecated=0.4.1)
+@available(*, deprecated=0.4.1)
 public func > (lhs: NSTimeInterval, rhs: Duration) -> Bool {
     return lhs > rhs.interval
 }
 
-@availability(*, deprecated=0.4.1)
+@available(*, deprecated=0.4.1)
 public func > (lhs: Duration, rhs: NSTimeInterval) -> Bool {
     return lhs.interval > rhs
 }
 
-@availability(*, deprecated=0.4.1)
+@available(*, deprecated=0.4.1)
 public func == (lhs: NSTimeInterval, rhs: Duration) -> Bool {
     return lhs == rhs.interval
 }
 
-@availability(*, deprecated=0.4.1)
+@available(*, deprecated=0.4.1)
 public func == (lhs: Duration, rhs: NSTimeInterval) -> Bool {
     return lhs.interval == rhs
 }
 
-@availability(*, deprecated=0.4.1)
+@available(*, deprecated=0.4.1)
 public func >= (lhs: NSTimeInterval, rhs: Duration) -> Bool {
     return lhs >= rhs.interval
 }
 
-@availability(*, deprecated=0.4.1)
+@available(*, deprecated=0.4.1)
 public func >= (lhs: Duration, rhs: NSTimeInterval) -> Bool {
     return lhs.interval >= rhs
 }
 
-@availability(*, deprecated=0.4.1)
+@available(*, deprecated=0.4.1)
 public func <= (lhs: NSTimeInterval, rhs: Duration) -> Bool {
     return lhs <= rhs.interval
 }
 
-@availability(*, deprecated=0.4.1)
+@available(*, deprecated=0.4.1)
 public func <= (lhs: Duration, rhs: NSTimeInterval) -> Bool {
     return lhs.interval <= rhs
 }
 
-@availability(*, deprecated=0.4.1)
+@available(*, deprecated=0.4.1)
 public func != (lhs: NSTimeInterval, rhs: Duration) -> Bool {
     return lhs != rhs.interval
 }
 
-@availability(*, deprecated=0.4.1)
+@available(*, deprecated=0.4.1)
 public func != (lhs: Duration, rhs: NSTimeInterval) -> Bool {
     return lhs.interval != rhs
 }

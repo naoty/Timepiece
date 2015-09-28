@@ -164,7 +164,7 @@ class NSDateTestCase: XCTestCase {
         let tenWeeksFromNow = now + 10.weeks
         
         XCTAssertEqual(oneMinuteFromNow - now, 60)
-        XCTAssertEqual(tenWeeksFromNow - now, 3600*24*7*10)
+        XCTAssertEqualWithAccuracy(tenWeeksFromNow - now, 3600*24*7*10, accuracy: 3600)
     }
     
     func testChangeWeekday() {

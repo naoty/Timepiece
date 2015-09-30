@@ -82,9 +82,8 @@ pod "Timepiece"
 github "naoty/Timepiece"
 ```
 
-## Swift 2.0
-
-We provide the support for Swift 2.0 at `swift-2.0` branch.
+## tvOS support
+Timepiece supports tvOS at `tvOS` branch. This branch will be merged to `master` after Xcode 7.1 is released.
 
 ## Contribution
 

@@ -17,7 +17,7 @@ class NSTimeIntervalTestCase: XCTestCase {
         let tenWeeksFromNow = now + 10.weeks
         
         XCTAssertEqual(oneMinuteFromNow - now, 60)
-        XCTAssertEqual(tenWeeksFromNow - now, 3600*24*7*10)
+        XCTAssertEqualWithAccuracy(tenWeeksFromNow - now, 3600*24*7*10, accuracy: 3600)
         
         XCTAssert(oneMinuteFromNow - now < 61.seconds)
         XCTAssert(oneMinuteFromNow - now > 59.seconds)
@@ -29,7 +29,8 @@ class NSTimeIntervalTestCase: XCTestCase {
         XCTAssert(oneMinuteFromNow - now != 1.seconds)
         XCTAssertFalse(oneMinuteFromNow - now >= 61.seconds)
         XCTAssertFalse(oneMinuteFromNow - now <= 59.seconds)
-        
-        XCTAssert(tenWeeksFromNow - now == 10.week)
+
+        // Disabled because of DST problems
+        // XCTAssert(tenWeeksFromNow - now == 10.week)
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-private let supportsDateByAddingUnit = NSCalendar.currentCalendar().respondsToSelector("dateByAddingUnit:value:toDate:options:")
+private let supportsDateByAddingUnit = NSCalendar.currentCalendar().respondsToSelector(#selector(NSCalendar.dateByAddingUnit(_:value:toDate:options:)))
 
 extension NSCalendar {
     func dateByAddingDuration(duration: Duration, toDate date: NSDate, options opts: NSCalendarOptions) -> NSDate? {

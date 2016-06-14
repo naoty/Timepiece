@@ -82,9 +82,6 @@ pod "Timepiece"
 github "naoty/Timepiece"
 ```
 
-## tvOS support
-Timepiece supports tvOS at `tvOS` branch. This branch will be merged to `master` after Xcode 7.1 is released.
-
 ## Contribution
 
 1. Fork

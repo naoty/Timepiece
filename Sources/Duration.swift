@@ -12,30 +12,30 @@ prefix func - (duration: Duration) -> (Duration) {
     return Duration(value: -duration.value, unit: duration.unit)
 }
 
-public class Duration {
-    public let value: Int
-    public let unit: Calendar.Component
-    private let calendar = Calendar.current
+open class Duration {
+    open let value: Int
+    open let unit: Calendar.Component
+    fileprivate let calendar = Calendar.current
     
     /**
         Initialize a date before a duration.
     */
-    public var ago: Date {
+    open var ago: Date {
         return ago(from: Date())
     }
     
-    public func ago(from date: Date) -> Date {
+    open func ago(from date: Date) -> Date {
         return calendar.dateByAdding(duration: -self, toDate: date)!
     }
     
     /**
         Initialize a date after a duration.
     */
-    public var later: Date {
+    open var later: Date {
         return later(from: Date())
     }
     
-    public func later(from date: Date) -> Date {
+    open func later(from date: Date) -> Date {
         return calendar.dateByAdding(duration: self, toDate: date)!
     }
     
@@ -44,7 +44,7 @@ public class Duration {
     
         This operation is performed under incorrect assumption that 1 month is always equal to 30 days.
     */
-    public lazy var interval: TimeInterval = { [unowned self] in
+    open lazy var interval: TimeInterval = { [unowned self] in
         return self.unit.interval * TimeInterval(self.value)
     }()
     

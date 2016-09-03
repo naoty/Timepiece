@@ -434,18 +434,24 @@
 					};
 					3DE7CFAF1B27126F00E0F331 = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 					3DE7CFB91B27126F00E0F331 = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 					8015E2111BB9B41400545DF5 = {
 						CreatedOnToolsVersion = 7.0;
 					};
 					8061C2991BB9B62200F0494D = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 					};
 					8061C2A21BB9B62200F0494D = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -826,6 +832,7 @@
 				PRODUCT_NAME = Timepiece;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -850,6 +857,7 @@
 				PRODUCT_NAME = Timepiece;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -874,6 +882,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -895,6 +904,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -958,6 +968,7 @@
 				PRODUCT_NAME = Timepiece;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -981,6 +992,7 @@
 				PRODUCT_NAME = Timepiece;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -997,6 +1009,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.Timepiece-tvOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
@@ -1013,6 +1026,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.Timepiece-tvOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;

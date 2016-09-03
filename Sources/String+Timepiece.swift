@@ -11,9 +11,9 @@ import Foundation
 public extension String {
     // MARK - Parse into NSDate
     
-    func dateFromFormat(format: String) -> NSDate? {
-        let formatter = NSDateFormatter()
+    func dateFromFormat(_ format: String) -> Date? {
+        let formatter = DateFormatter()
         formatter.dateFormat = format
-        return formatter.dateFromString(self)
+        return formatter.date(from: self)
     }
 }

@@ -10,7 +10,7 @@ import Timepiece
 import XCTest
 
 class NSTimeIntervalTestCase: XCTestCase {
-    let now = NSDate()
+    let now = Date()
 
     func testDurationComparison() {
         let oneMinuteFromNow = now + 1.minute

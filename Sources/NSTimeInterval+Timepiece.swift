@@ -15,50 +15,50 @@ import Foundation
     Therefore, The comparison between Duration and NSTimeInterval is also incorrect.
 */
 
-public func < (lhs: NSTimeInterval, rhs: Duration) -> Bool {
+public func < (lhs: TimeInterval, rhs: Duration) -> Bool {
     return lhs < rhs.interval
 }
 
-public func < (lhs: Duration, rhs: NSTimeInterval) -> Bool {
+public func < (lhs: Duration, rhs: TimeInterval) -> Bool {
     return lhs.interval < rhs
 }
 
-public func > (lhs: NSTimeInterval, rhs: Duration) -> Bool {
+public func > (lhs: TimeInterval, rhs: Duration) -> Bool {
     return lhs > rhs.interval
 }
 
-public func > (lhs: Duration, rhs: NSTimeInterval) -> Bool {
+public func > (lhs: Duration, rhs: TimeInterval) -> Bool {
     return lhs.interval > rhs
 }
 
-public func == (lhs: NSTimeInterval, rhs: Duration) -> Bool {
+public func == (lhs: TimeInterval, rhs: Duration) -> Bool {
     return lhs == rhs.interval
 }
 
-public func == (lhs: Duration, rhs: NSTimeInterval) -> Bool {
+public func == (lhs: Duration, rhs: TimeInterval) -> Bool {
     return lhs.interval == rhs
 }
 
-public func >= (lhs: NSTimeInterval, rhs: Duration) -> Bool {
+public func >= (lhs: TimeInterval, rhs: Duration) -> Bool {
     return lhs >= rhs.interval
 }
 
-public func >= (lhs: Duration, rhs: NSTimeInterval) -> Bool {
+public func >= (lhs: Duration, rhs: TimeInterval) -> Bool {
     return lhs.interval >= rhs
 }
 
-public func <= (lhs: NSTimeInterval, rhs: Duration) -> Bool {
+public func <= (lhs: TimeInterval, rhs: Duration) -> Bool {
     return lhs <= rhs.interval
 }
 
-public func <= (lhs: Duration, rhs: NSTimeInterval) -> Bool {
+public func <= (lhs: Duration, rhs: TimeInterval) -> Bool {
     return lhs.interval <= rhs
 }
 
-public func != (lhs: NSTimeInterval, rhs: Duration) -> Bool {
+public func != (lhs: TimeInterval, rhs: Duration) -> Bool {
     return lhs != rhs.interval
 }
 
-public func != (lhs: Duration, rhs: NSTimeInterval) -> Bool {
+public func != (lhs: Duration, rhs: TimeInterval) -> Bool {
     return lhs.interval != rhs
 }

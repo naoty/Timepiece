@@ -10,49 +10,49 @@ import Foundation
 
 public extension Int {
     var year: Duration {
-        return Duration(value: self, unit: .Year)
+        return Duration(value: self, unit: .year)
     }
     var years: Duration {
         return year
     }
     
     var month: Duration {
-        return Duration(value: self, unit: .Month)
+        return Duration(value: self, unit: .month)
     }
     var months: Duration {
         return month
     }
     
     var week: Duration {
-        return Duration(value: self, unit: .WeekOfYear)
+        return Duration(value: self, unit: .weekOfYear)
     }
     var weeks: Duration {
         return week
     }
     
     var day: Duration {
-        return Duration(value: self, unit: .Day)
+        return Duration(value: self, unit: .day)
     }
     var days: Duration {
         return day
     }
     
     var hour: Duration {
-        return Duration(value: self, unit: .Hour)
+        return Duration(value: self, unit: .hour)
     }
     var hours: Duration {
         return hour
     }
     
     var minute: Duration {
-        return Duration(value: self, unit: .Minute)
+        return Duration(value: self, unit: .minute)
     }
     var minutes: Duration {
         return minute
     }
     
     var second: Duration {
-        return Duration(value: self, unit: .Second)
+        return Duration(value: self, unit: .second)
     }
     var seconds: Duration {
         return second

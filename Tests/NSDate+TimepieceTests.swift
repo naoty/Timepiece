@@ -57,7 +57,7 @@ class NSDateTestCase: XCTestCase {
     
     func testEqual() {
         let date1 = Date.date(year: 2015, month: 5, day: 1)
-        let date2 = "2015-05-01".dateFromFormat("yyyy-MM-dd")
+        let date2 = "2015-05-01".dateFromFormat("yyyy-MM-dd", locale: Locale(identifier: "en-US"))
         let date3 = date1 - 1.second
 
         XCTAssertTrue(date1 == date2, "")

@@ -18,9 +18,9 @@ class NSDateTestCase: XCTestCase {
         components.year = 1987
         components.month = 6
         components.day = 2
-        components.hour = 0
-        components.minute = 0
-        components.second = 0
+        components.hour = 14
+        components.minute = 10
+        components.second = 11
         return calendar.date(from: components)
     }
     let cst = NSTimeZone(abbreviation: "CST")!
@@ -106,19 +106,19 @@ class NSDateTestCase: XCTestCase {
     }
     
     func testHour() {
-        XCTAssertEqual(birthday.hour, 0, "")
+        XCTAssertEqual(birthday.hour, 14, "")
     }
     
     func testMinute() {
-        XCTAssertEqual(birthday.minute, 0, "")
+        XCTAssertEqual(birthday.minute, 10, "")
     }
     
     func testSecond() {
-        XCTAssertEqual(birthday.second, 0, "")
+        XCTAssertEqual(birthday.second, 11, "")
     }
     
     func testDateWithYearAndMonthAndDayAndHourAndMinuteAndSecond() {
-        XCTAssertEqual(Date.date(year: 1987, month: 6, day: 2), birthday, "")
+        XCTAssertEqual(Date.date(year: 1987, month: 6, day: 2, hour: 14, minute: 10, second: 11), birthday, "")
     }
     
     func testToday() {
@@ -217,7 +217,31 @@ class NSDateTestCase: XCTestCase {
     }
     
     func testStringFromFormat() {
-        let timestamp = birthday.stringFromFormat("yyyy-MM-dd HH:mm:SS")
-        XCTAssertEqual(timestamp, "1987-06-02 00:00:00", "")
+        let timestamp = birthday.stringFromFormat("yyyy-MM-dd HH:mm:ss")
+        print(timestamp)
+        XCTAssertEqual(timestamp, "1987-06-02 14:10:11", "")
     }
+    
+    func testLocalizedStringFromFormat() {
+        let localizedStringFormatTestTemplate = "EEEE DD MM MMM MMMM"
+        let timestampFR = birthday.stringFromFormat(localizedStringFormatTestTemplate, locale: Locale(identifier: "fr_FR"))
+        XCTAssertEqual(timestampFR, "mardi 153 06 juin juin", "")
+        
+        let timestampCH = birthday.stringFromFormat(localizedStringFormatTestTemplate, locale: Locale(identifier: "de_CH"))
+        XCTAssertEqual(timestampCH, "Dienstag 153 06 Juni Juni", "")
+        
+        let timestampUS = birthday.stringFromFormat(localizedStringFormatTestTemplate, locale: Locale(identifier: "en-US"))
+        XCTAssertEqual(timestampUS, "Tuesday 153 06 Jun June", "")
+    }
+    
+    func testLocalizedTimeWithSystemDefault() {
+        let time = birthday.localizedTime()
+        XCTAssertEqual(time, "2:10 PM")
+    }
+    
+    func testLocalizedTimeWithDifferentLocale() {
+        let time = birthday.localizedTime(Locale(identifier: "de_CH"))
+        XCTAssertEqual(time, "14:10")
+    }
+    
 }

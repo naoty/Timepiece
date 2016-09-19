@@ -189,4 +189,28 @@ public extension Date {
         formatter.dateFormat = format
         return formatter.string(from: self)
     }
+    
+    func stringFromFormat(_ format: String, locale: Locale) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = locale
+        formatter.dateFormat = format
+        return formatter.string(from: self)
+    }
+    
+    // MARK: - Localized time
+        
+    func localizedTime() -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .none
+        formatter.timeStyle = .short
+        return formatter.string(from: self)
+    }
+    
+    func localizedTime(_ locale: Locale) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = locale
+        formatter.dateStyle = .none
+        formatter.timeStyle = .short
+        return formatter.string(from: self)
+    }
 }

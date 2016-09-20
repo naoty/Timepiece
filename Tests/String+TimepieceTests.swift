@@ -13,6 +13,11 @@ class StringTests: XCTestCase {
     let birthday = Date.date(year: 1987, month: 6, day: 2)
     
     func testDateFromFormat() {
+        
+        if let date = "1987-06-02".dateFromFormat("yyyy-MM-dd") {
+            XCTAssertEqual(date, birthday, "")
+        }
+        
         if let date = "1987-06-02".dateFromFormat("yyyy-MM-dd", locale: Locale(identifier: "en-US")) {
             XCTAssertEqual(date, birthday, "")
         }

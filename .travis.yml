@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode8gm
 before_install:
   - gem install xcpretty -N
 script:

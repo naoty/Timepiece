@@ -25,7 +25,7 @@ open class Duration {
     }
     
     open func ago(from date: Date) -> Date {
-        return calendar.dateByAdding(duration: -self, toDate: date)!
+        return calendar.dateByAdding(duration: -self, to: date)!
     }
     
     /**
@@ -36,7 +36,7 @@ open class Duration {
     }
     
     open func later(from date: Date) -> Date {
-        return calendar.dateByAdding(duration: self, toDate: date)!
+        return calendar.dateByAdding(duration: self, to: date)!
     }
     
     /**

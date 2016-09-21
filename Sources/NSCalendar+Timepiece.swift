@@ -10,7 +10,7 @@ import Foundation
 
 
 extension Calendar {
-    func dateByAdding(duration: Duration, toDate: Date) -> Date? {
-        return self.date(byAdding: DateComponents(duration), to: toDate)
+    func dateByAdding(duration: Duration, to date: Date) -> Date? {
+        return self.date(byAdding: DateComponents(duration), to: date)
     }
 }

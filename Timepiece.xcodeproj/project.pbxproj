@@ -426,9 +426,11 @@
 				TargetAttributes = {
 					3DC6180E199E1F8400FB7AAC = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0800;
 					};
 					3DC61819199E1F8400FB7AAC = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0800;
 					};
 					3DE7CFAF1B27126F00E0F331 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -747,6 +749,7 @@
 				PRODUCT_NAME = Timepiece;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -765,6 +768,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Timepiece;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -780,6 +784,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -791,6 +796,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

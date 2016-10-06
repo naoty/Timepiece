@@ -10,54 +10,54 @@ import Timepiece
 import XCTest
 
 class NSDateTestCase: XCTestCase {
-    let now = NSDate()
+    let now = Date()
     // TODO: Stub calendar's timezone
-    let calendar = NSCalendar.currentCalendar()
-    var birthday: NSDate! {
-        let components = NSDateComponents()
+    let calendar = NSCalendar.current
+    var birthday: Date! {
+        var components = DateComponents()
         components.year = 1987
         components.month = 6
         components.day = 2
-        components.hour = 0
-        components.minute = 0
-        components.second = 0
-        return calendar.dateFromComponents(components)
+        components.hour = 14
+        components.minute = 10
+        components.second = 11
+        return calendar.date(from: components)
     }
     let cst = NSTimeZone(abbreviation: "CST")!
     
     func testPlus() {
-        let nextDay = calendar.dateByAddingUnit(.Day, value: 1, toDate: now, options: .SearchBackwards)!
+        let nextDay = (calendar as NSCalendar).date(byAdding: .day, value: 1, to: now, options: .searchBackwards)!
         XCTAssertEqual(now + 1.day, nextDay, "")
         
-        let nextWeek = calendar.dateByAddingUnit(.WeekOfYear, value: 1, toDate: now, options: .SearchBackwards)!
+        let nextWeek = (calendar as NSCalendar).date(byAdding: .weekOfYear, value: 1, to: now, options: .searchBackwards)!
         XCTAssertEqual(now + 1.week, nextWeek, "")
     }
     
     func testMinusWithDuration() {
-        let lastDay = calendar.dateByAddingUnit(.Day, value: -1, toDate: now, options: .SearchBackwards)!
+        let lastDay = (calendar as NSCalendar).date(byAdding: .day, value: -1, to: now, options: .searchBackwards)!
         XCTAssertEqual(now - 1.day, lastDay, "")
         
-        let lastWeek = calendar.dateByAddingUnit(.WeekOfYear, value: -1, toDate: now, options: .SearchBackwards)!
+        let lastWeek = (calendar as NSCalendar).date(byAdding: .weekOfYear, value: -1, to: now, options: .searchBackwards)!
         XCTAssertEqual(now - 1.week, lastWeek, "")
     }
     
     func testMinusWithDate() {
-        let date1 = NSDate.date(year: 2015, month: 5, day: 1)
+        let date1 = Date.date(year: 2015, month: 5, day: 1)
         let date2 = date1 + 1.hour
         
         XCTAssertTrue(date2 - date1 == 1.hour, "")
     }
     
     func testMinusWithDifferentTimeZone() {
-        let date1 = NSDate.date(year: 2015, month: 5, day: 1)
+        let date1 = Date.date(year: 2015, month: 5, day: 1)
         let date2 = (date1 + 1.hour).change(timeZone: cst)
         
         XCTAssertTrue(date2 - date1 == 1.hour, "")
     }
     
     func testEqual() {
-        let date1 = NSDate.date(year: 2015, month: 5, day: 1)
-        let date2 = "2015-05-01".dateFromFormat("yyyy-MM-dd")
+        let date1 = Date.date(year: 2015, month: 5, day: 1)
+        let date2 = "2015-05-01".dateFromFormat("yyyy-MM-dd", locale: Locale(identifier: "en-US"))
         let date3 = date1 - 1.second
 
         XCTAssertTrue(date1 == date2, "")
@@ -65,25 +65,25 @@ class NSDateTestCase: XCTestCase {
     }
     
     func testEqualWithDifferentTimeZones() {
-        let date1 = NSDate.date(year: 2015, month: 5, day: 1)
+        let date1 = Date.date(year: 2015, month: 5, day: 1)
         let date2 = date1.change(timeZone: cst)
         
         XCTAssertTrue(date1 == date2, "")
     }
 
     func testCompare() {
-        let date1 = NSDate.date(year: 2015, month: 5, day: 1)
+        let date1 = Date.date(year: 2015, month: 5, day: 1)
         let date2 = date1 + 1.second
         let date3 = date1 - 1.second
 
-        XCTAssertTrue(date1 < date2, "")
+        XCTAssertTrue(date1 <  date2, "")
         XCTAssertTrue(date1 <= date1, "")
-        XCTAssertTrue(date1 > date3, "")
+        XCTAssertTrue(date1 >  date3, "")
         XCTAssertTrue(date1 >= date1, "")
     }
     
     func testCompareWithDifferentTimeZones() {
-        let date1 = NSDate.date(year: 2015, month: 5, day: 1)
+        let date1 = Date.date(year: 2015, month: 5, day: 1)
         let date2 = (date1 + 1.second).change(timeZone: cst)
         let date3 = (date1 - 1.second).change(timeZone: cst)
         
@@ -106,48 +106,48 @@ class NSDateTestCase: XCTestCase {
     }
     
     func testHour() {
-        XCTAssertEqual(birthday.hour, 0, "")
+        XCTAssertEqual(birthday.hour, 14, "")
     }
     
     func testMinute() {
-        XCTAssertEqual(birthday.minute, 0, "")
+        XCTAssertEqual(birthday.minute, 10, "")
     }
     
     func testSecond() {
-        XCTAssertEqual(birthday.second, 0, "")
+        XCTAssertEqual(birthday.second, 11, "")
     }
     
     func testDateWithYearAndMonthAndDayAndHourAndMinuteAndSecond() {
-        XCTAssertEqual(NSDate.date(year: 1987, month: 6, day: 2), birthday, "")
+        XCTAssertEqual(Date.date(year: 1987, month: 6, day: 2, hour: 14, minute: 10, second: 11), birthday, "")
     }
     
     func testToday() {
-        let components = calendar.components([.Year, .Month, .Day, .Hour, .Minute, .Second], fromDate: now)
+        var components = (calendar as NSCalendar).components([.year, .month, .day, .hour, .minute, .second], from: now)
         components.hour = 0
         components.minute = 0
         components.second = 0
-        let today = calendar.dateFromComponents(components)
-        XCTAssertEqual(NSDate.today(), today!, "")
+        let today = calendar.date(from: components)
+        XCTAssertEqual(Date.today(), today!, "")
     }
     
     func testYesterday() {
-        let components = calendar.components([.Year, .Month, .Day, .Hour, .Minute, .Second], fromDate: now)
+        var components = (calendar as NSCalendar).components([.year, .month, .day, .hour, .minute, .second], from: now)
         components.day = now.day - 1
         components.hour = 0
         components.minute = 0
         components.second = 0
-        let yesterday = calendar.dateFromComponents(components)
-        XCTAssertEqual(NSDate.yesterday(), yesterday!, "")
+        let yesterday = calendar.date(from: components)
+        XCTAssertEqual(Date.yesterday(), yesterday!, "")
     }
     
     func testTomorrow() {
-        let components = calendar.components([.Year, .Month, .Day, .Hour, .Minute, .Second], fromDate: now)
+        var components = (calendar as NSCalendar).components([.year, .month, .weekday, .hour, .minute, .second], from: now)
         components.day = now.day + 1
         components.hour = 0
         components.minute = 0
         components.second = 0
-        let tomorrow = calendar.dateFromComponents(components)
-        XCTAssertEqual(NSDate.tomorrow(), tomorrow!, "")
+        let tomorrow = calendar.date(from: components)
+        XCTAssertEqual(Date.tomorrow(), tomorrow!, "")
     }
     
     func testChange() {
@@ -212,12 +212,36 @@ class NSDateTestCase: XCTestCase {
     
     func testEndOfMonth() {
         // Leap year
-        let date = NSDate.date(year: 2012, month: 2, day: 1)
+        let date = Date.date(year: 2012, month: 2, day: 1)
         XCTAssertEqual(date.endOfMonth.day, 29, "")
     }
     
     func testStringFromFormat() {
-        let timestamp = birthday.stringFromFormat("yyyy-MM-dd HH:mm:SS")
-        XCTAssertEqual(timestamp, "1987-06-02 00:00:00", "")
+        let timestamp = birthday.stringFromFormat("yyyy-MM-dd HH:mm:ss")
+        print(timestamp)
+        XCTAssertEqual(timestamp, "1987-06-02 14:10:11", "")
     }
+    
+    func testLocalizedStringFromFormat() {
+        let localizedStringFormatTestTemplate = "EEEE DD MM MMM MMMM"
+        let timestampFR = birthday.stringFromFormat(localizedStringFormatTestTemplate, locale: Locale(identifier: "fr_FR"))
+        XCTAssertEqual(timestampFR, "mardi 153 06 juin juin", "")
+        
+        let timestampCH = birthday.stringFromFormat(localizedStringFormatTestTemplate, locale: Locale(identifier: "de_CH"))
+        XCTAssertEqual(timestampCH, "Dienstag 153 06 Juni Juni", "")
+        
+        let timestampUS = birthday.stringFromFormat(localizedStringFormatTestTemplate, locale: Locale(identifier: "en-US"))
+        XCTAssertEqual(timestampUS, "Tuesday 153 06 Jun June", "")
+    }
+    
+    func testLocalizedTimeWithSystemDefault() {
+        let time = birthday.localizedTime()
+        XCTAssertEqual(time, "2:10 PM")
+    }
+    
+    func testLocalizedTimeWithDifferentLocale() {
+        let time = birthday.localizedTime(Locale(identifier: "de_CH"))
+        XCTAssertEqual(time, "14:10")
+    }
+    
 }

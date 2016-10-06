@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Timepiece"
-  s.version      = "0.5.0"
+  s.version      = "0.6.0"
   s.summary      = "Intuitive NSDate extensions in Swift"
   s.homepage     = "https://github.com/naoty/Timepiece"
   s.license      = { :type => "MIT", :file => "LICENSE" }

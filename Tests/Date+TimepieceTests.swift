@@ -10,6 +10,42 @@ import Timepiece
 import XCTest
 
 class DateTests: XCTestCase {
+    private var sample: Date {
+        return Date(year: 2014, month: 8, day: 15, hour: 20, minute: 25, second: 43)
+    }
+    
+    func testYear() {
+        XCTAssertEqual(sample.year, 2014)
+    }
+
+    func testMonth() {
+        XCTAssertEqual(sample.month, 8)
+    }
+
+    func testDay() {
+        XCTAssertEqual(sample.day, 15)
+    }
+
+    func testHour() {
+        XCTAssertEqual(sample.hour, 20)
+    }
+
+    func testMinute() {
+        XCTAssertEqual(sample.minute, 25)
+    }
+
+    func testSecond() {
+        XCTAssertEqual(sample.second, 43)
+    }
+
+    func testNanosecond() {
+        XCTAssertEqual(sample.nanosecond, 0)
+    }
+
+    func testWeekday() {
+        XCTAssertEqual(sample.weekday, 6)
+    }
+
     func testInit() {
         let heisei = 235
         var japaneseCalendar = Calendar(identifier: .japanese)

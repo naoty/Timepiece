@@ -9,6 +9,55 @@
 import Foundation
 
 extension Date {
+    /// The year.
+    public var year: Int {
+        return dateComponents.year!
+    }
+
+    /// The month.
+    public var month: Int {
+        return dateComponents.month!
+    }
+
+    /// The day.
+    public var day: Int {
+        return dateComponents.day!
+    }
+
+    /// The hour.
+    public var hour: Int {
+        return dateComponents.hour!
+    }
+
+    /// The minute.
+    public var minute: Int {
+        return dateComponents.minute!
+    }
+
+    /// The second.
+    public var second: Int {
+        return dateComponents.second!
+    }
+
+    /// The nanosecond.
+    public var nanosecond: Int {
+        return dateComponents.nanosecond!
+    }
+
+    /// The weekday.
+    public var weekday: Int {
+        return dateComponents.weekday!
+    }
+    
+    private var dateComponents: DateComponents {
+        return calendar.dateComponents([.era, .year, .month, .day, .hour, .minute, .second, .nanosecond, .weekday], from: self)
+    }
+    
+    // Returns user's calendar to be used to return `DateComponents` of the receiver.
+    private var calendar: Calendar {
+        return .current
+    }
+
     /// Creates a new instance with specified date components.
     ///
     /// - parameter era:        The era.
@@ -24,7 +73,7 @@ extension Date {
     /// - returns: The created `Date` instance.
     public init(era: Int?, year: Int, month: Int, day: Int, hour: Int, minute: Int, second: Int, nanosecond: Int, on calendar: Calendar) {
         let now = Date()
-        var dateComponents = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second, .nanosecond], from: now)
+        var dateComponents = calendar.dateComponents([.era, .year, .month, .day, .hour, .minute, .second, .nanosecond], from: now)
         dateComponents.era = era
         dateComponents.year = year
         dateComponents.month = month

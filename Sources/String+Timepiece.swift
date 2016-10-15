@@ -8,12 +8,12 @@
 
 import Foundation
 
-public extension String {
-    // MARK - Parse into NSDate
-    
-    func dateFromFormat(format: String) -> NSDate? {
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = format
-        return formatter.dateFromString(self)
-    }
-}
+//public extension String {
+//    // MARK - Parse into NSDate
+//    
+//    func dateFromFormat(format: String) -> NSDate? {
+//        let formatter = NSDateFormatter()
+//        formatter.dateFormat = format
+//        return formatter.dateFromString(self)
+//    }
+//}

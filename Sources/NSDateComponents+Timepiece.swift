@@ -8,30 +8,30 @@
 
 import Foundation
 
-public extension NSDateComponents {
-    convenience init(_ duration: Duration) {
-        self.init()
-        switch duration.unit{
-        case NSCalendarUnit.Day:
-            day = duration.value
-        case NSCalendarUnit.Weekday:
-            weekday = duration.value
-        case NSCalendarUnit.WeekOfMonth:
-            weekOfMonth = duration.value
-        case NSCalendarUnit.WeekOfYear:
-            weekOfYear = duration.value
-        case NSCalendarUnit.Hour:
-            hour = duration.value
-        case NSCalendarUnit.Minute:
-            minute = duration.value
-        case NSCalendarUnit.Month:
-            month = duration.value
-        case NSCalendarUnit.Second:
-            second = duration.value
-        case NSCalendarUnit.Year:
-            year = duration.value
-        default:
-            () // unsupported / ignore
-        }
-    }
-}
+//public extension NSDateComponents {
+//    convenience init(_ duration: Duration) {
+//        self.init()
+//        switch duration.unit{
+//        case NSCalendarUnit.Day:
+//            day = duration.value
+//        case NSCalendarUnit.Weekday:
+//            weekday = duration.value
+//        case NSCalendarUnit.WeekOfMonth:
+//            weekOfMonth = duration.value
+//        case NSCalendarUnit.WeekOfYear:
+//            weekOfYear = duration.value
+//        case NSCalendarUnit.Hour:
+//            hour = duration.value
+//        case NSCalendarUnit.Minute:
+//            minute = duration.value
+//        case NSCalendarUnit.Month:
+//            month = duration.value
+//        case NSCalendarUnit.Second:
+//            second = duration.value
+//        case NSCalendarUnit.Year:
+//            year = duration.value
+//        default:
+//            () // unsupported / ignore
+//        }
+//    }
+//}

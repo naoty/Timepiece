@@ -8,6 +8,70 @@
 
 import Foundation
 
+public extension Int {
+    var year: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.year = self
+        return dateComponents
+    }
+
+    var years: DateComponents {
+        return year
+    }
+    
+    var month: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.month = self
+        return dateComponents
+    }
+
+    var months: DateComponents {
+        return month
+    }
+
+    var day: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.day = self
+        return dateComponents
+    }
+
+    var days: DateComponents {
+        return day
+    }
+
+    var hour: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.hour = self
+        return dateComponents
+    }
+
+    var hours: DateComponents {
+        return hour
+    }
+    
+    var minute: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.minute = self
+        return dateComponents
+    }
+
+    var minutes: DateComponents {
+        return minute
+    }
+    
+    var second: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.second = self
+        return dateComponents
+    }
+    
+    var nanosecond: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.nanosecond = self
+        return dateComponents
+    }
+}
+
 //public extension Int {
 //    var year: Duration {
 //        return Duration(value: self, unit: .Year)

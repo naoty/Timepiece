@@ -18,6 +18,10 @@ class IntTestCase: XCTestCase {
         XCTAssertEqual(1.month.month, 1)
     }
 
+    func testWeek() {
+        XCTAssertEqual(1.week.day, 7)
+    }
+
     func testDay() {
         XCTAssertEqual(1.day.day, 1)
     }

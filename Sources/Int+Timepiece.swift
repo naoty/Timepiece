@@ -29,6 +29,16 @@ public extension Int {
         return month
     }
 
+    var week: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.day = 7 * self
+        return dateComponents
+    }
+
+    var weeks: DateComponents {
+        return week
+    }
+
     var day: DateComponents {
         var dateComponents = DateComponents()
         dateComponents.day = self

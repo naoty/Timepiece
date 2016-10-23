@@ -48,11 +48,11 @@ extension Date {
     public var weekday: Int {
         return dateComponents.weekday!
     }
-    
+
     private var dateComponents: DateComponents {
         return calendar.dateComponents([.era, .year, .month, .day, .hour, .minute, .second, .nanosecond, .weekday], from: self)
     }
-    
+
     // Returns user's calendar to be used to return `DateComponents` of the receiver.
     private var calendar: Calendar {
         return .current

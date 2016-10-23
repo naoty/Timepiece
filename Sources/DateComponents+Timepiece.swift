@@ -16,7 +16,7 @@ public extension DateComponents {
     var later: Date? {
         return Calendar.current.date(byAdding: self, to: Date())
     }
-    
+
     /// Creates inverse `DateComponents`
     ///
     /// - parameter rhs: A `DateComponents`

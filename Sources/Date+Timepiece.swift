@@ -120,4 +120,24 @@ extension Date {
         let now = Date()
         return Date(year: now.year, month: now.month, day: now.day)
     }
+
+    /// Creates a new instance added a `DateComponents`
+    ///
+    /// - parameter left:  The date.
+    /// - parameter right: The date components.
+    ///
+    /// - returns: The created `Date` instance.
+    public static func +(left: Date, right: DateComponents) -> Date? {
+        return Calendar.current.date(byAdding: right, to: left)
+    }
+
+    /// Creates a new instance subtracted a `DateComponents`
+    ///
+    /// - parameter left:  The date.
+    /// - parameter right: The date components.
+    ///
+    /// - returns: The created `Date` instance.
+    public static func -(left: Date, right: DateComponents) -> Date? {
+        return Calendar.current.date(byAdding: -right, to: left)
+    }
 }

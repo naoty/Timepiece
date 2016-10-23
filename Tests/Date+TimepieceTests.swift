@@ -88,4 +88,24 @@ class DateTests: XCTestCase {
         XCTAssertEqual(dateComponents.day, 15)
         XCTAssertEqual(dateComponents.weekday, 6)
     }
+
+    func testPlusDateComponents() {
+        let date = Date(year: 2016, month: 1, day: 1)
+
+        var dateComponents = DateComponents()
+        dateComponents.month = 1
+
+        let added = date + dateComponents
+        XCTAssertEqual(added?.month, 2)
+    }
+
+    func testMinusDateComponents() {
+        let date = Date(year: 2016, month: 1, day: 1)
+
+        var dateComponents = DateComponents()
+        dateComponents.month = 1
+
+        let added = date - dateComponents
+        XCTAssertEqual(added?.month, 12)
+    }
 }

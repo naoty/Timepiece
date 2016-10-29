@@ -154,4 +154,36 @@ extension Date {
     public static func - (left: Date, right: DateComponents) -> Date? {
         return Calendar.current.date(byAdding: -right, to: left)
     }
+
+    /// Creates a new `String` instance representing the receiver formatted in given date style and time style.
+    ///
+    /// - parameter dateStyle: The date style.
+    /// - parameter timeStyle: The time style.
+    ///
+    /// - returns: The created `String` instance.
+    public func string(inDateStyle dateStyle: DateFormatter.Style, andTimeStyle timeStyle: DateFormatter.Style) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = dateStyle
+        dateFormatter.timeStyle = timeStyle
+
+        return dateFormatter.string(from: self)
+    }
+
+    /// Creates a new `String` instance representing the date of the receiver formatted in given date style.
+    ///
+    /// - parameter dateStyle: The date style.
+    ///
+    /// - returns: The created `String` instance.
+    public func dateString(in dateStyle: DateFormatter.Style) -> String {
+        return string(inDateStyle: dateStyle, andTimeStyle: .none)
+    }
+
+    /// Creates a new `String` instance representing the time of the receiver formatted in given time style.
+    ///
+    /// - parameter timeStyle: The time style.
+    ///
+    /// - returns: The created a `String` instance.
+    public func timeString(in timeStyle: DateFormatter.Style) -> String {
+        return string(inDateStyle: .none, andTimeStyle: timeStyle)
+    }
 }

@@ -144,4 +144,19 @@ class DateTests: XCTestCase {
         let added = date - dateComponents
         XCTAssertEqual(added?.month, 12)
     }
+
+    func testString() {
+        let sampleString = sample.string(inDateStyle: .short, andTimeStyle: .short)
+        XCTAssertEqual(sampleString, "8/15/14, 8:25 PM")
+    }
+
+    func testDateString() {
+        let sampleString = sample.dateString(in: .short)
+        XCTAssertEqual(sampleString, "8/15/14")
+    }
+
+    func testTimeString() {
+        let sampleString = sample.timeString(in: .short)
+        XCTAssertEqual(sampleString, "8:25 PM")
+    }
 }

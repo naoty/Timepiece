@@ -1,9 +1,10 @@
 # Timepiece
-Intuitive date calculation in Swift
+Intuitive date handling in Swift
 
-## Feature
-* **Intuitive**: Working with `Date`, `DateComponent`, `Calendar` and so on is a bit troublesome. Timepiece is a set of helpers to make handling them a bit more intuitive.
-* **Simple**: Timepiece doesn't have many convenient features. But, its maintainers focus on reliability and maintainability.
+## Features
+* :bulb: **Intuitive**: Timepiece provides a set of helpers to make date handling easier.
+* :clock9: **Correctness**: Using Foundation API correctly, Timepiece helps to calculate dates correctly without deep understanding.
+* :package: **Small**: Timepiece has only 4 file and < 400 sloc. You can read the inside of this easily.
 
 ## Requirements
 
@@ -18,42 +19,42 @@ Intuitive date calculation in Swift
 ### Initialization
 
 ```swift
-let birthday = Date(year: 1987, month: 6, day: 2)
-let firstCommitDate = Date(year: 2014, month: 8, day: 15, hour: 20, minute: 25, second: 43)
+Date(era: 235, year: 26, month: 8, day: 14, hour: 20, minute: 25, second: 43, nanosecond: 0, on: Calendar(identifier: .japanese))
+Date(year: 2014, month: 8, day: 14, hour: 20, minute: 25, second: 43, nanosecond: 0)
+Date(year: 2014, month: 8, day: 14, hour: 20, minute: 25, second: 43)
+Date(year: 2014, month: 8, day: 14)
+
+Date.today()
+Date.yesterday()
+Date.tomorrow()
 ```
 
 ### Calculation
 
 ```swift
-let nextWeek = Date() + 1.week
-let dayAfterTomorrow = Date() + 2.days
+now + 1.year
+now - 2.months
+now + (3.weeks - 4.days + 5.hours)
 
-let today = Date.today()
-let tomorrow = Date.tomorrow()
-let yesterday = Date.yesterday()
-
-let dayBeforeYesterday = 2.days.ago
-let tokyoOlympicYear = 4.years.later
+1.year.later
+1.year.ago
 ```
 
-### Comparing
+### Formating
 
 ```swift
-firstCommitDate < 1.year.ago // false
-firstCommitDate > Date() // false
-(1.year.ago ... Date()).contains(firstCommitDate) // true
+now.string(inDateStyle: .long, andTimeStyle: .medium)
+now.dateString(in: .medium)
+now.timeString(in: .short)
+
+3.days.string(in: .full)
 ```
 
-### Formating and Parsing
+### Parsing
 
 ```swift
-// DateFormatterStyle
-5.minutes.later.string(for: .ShortStyle)
-"June 2, 1987".date(for: .LongStyle)
-
-// Fixed format string
-5.minutes.later.string(forFormat: "yyyy-MM-dd")
-"1987-06-02".date(forFormat: "yyyy-MM-dd")
+"2014/8/14".date(inFormat: "yyyy/MM/dd")
+"2014-08-14T20:25:43+0900".dateInISO8601Format()
 ```
 
 ## Installation

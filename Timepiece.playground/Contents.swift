@@ -1,42 +1,43 @@
 import Foundation
 import Timepiece
 
-//: ### Add durations to date
-let now = NSDate()
-let nextWeek = now + 1.week
-let dayAfterTomorrow = now + 2.days
+let now = Date()
 
-// shortcuts #1
-let today = NSDate.today()
-let tomorrow = NSDate.tomorrow()
-let yesterday = NSDate.yesterday()
+// Initializer
+Date(era: 235, year: 26, month: 8, day: 14, hour: 20, minute: 25, second: 43, nanosecond: 0, on: Calendar(identifier: .japanese))
+Date(year: 2014, month: 8, day: 14, hour: 20, minute: 25, second: 43, nanosecond: 0)
+Date(year: 2014, month: 8, day: 14, hour: 20, minute: 25, second: 43)
+Date(year: 2014, month: 8, day: 14)
 
-// shortcuts #2
-let dayBeforeYesterday = 2.days.ago
-let tokyoOlympicYear = 5.years.later
+Date.today()
+Date.yesterday()
+Date.tomorrow()
 
-//: ### Initialize by specifying date components
-let birthday = NSDate.date(year: 1987, month: 6, day: 2)
-let firstCommitDate = NSDate.date(year: 2014, month: 8, day: 15, hour: 20, minute: 25, second: 43)
+// The properties of Date
+now.year
+now.month
+now.weekday
+now.day
+now.hour
+now.minute
+now.second
+now.nanosecond
 
-//: ### Initialize by changing date components
-let christmas = now.change(month: 12, day: 25)
-let thisSunday = now.change(weekday: 1)
+// Calculation
+now + 1.year
+now - 2.months
+now + (3.weeks - 4.days + 5.hours)
 
-// shortcuts
-let newYearDay = now.beginningOfYear
-let timeLimit = now.endOfHour
+1.year.later
+1.year.ago
 
-//: ### Time zone
-let cst = NSTimeZone(abbreviation: "CST")!
-let dateInCST = now.beginningOfDay.change(timeZone: cst)
-dateInCST.timeZone
+// Format
+now.string(inDateStyle: .long, andTimeStyle: .medium)
+now.dateString(in: .medium)
+now.timeString(in: .short)
 
-//: ### Format and parse
-5.minutes.later.stringFromFormat("yyyy-MM-dd HH:mm:SS")
-"1987-06-02".dateFromFormat("yyyy-MM-dd")
+3.days.string(in: .full)
 
-//: ### Compare dates
-firstCommitDate < 1.year.ago
-(1.year.ago...now).contains(firstCommitDate)
-firstCommitDate > now
+// Parse
+"2014/8/14".date(inFormat: "yyyy/MM/dd")
+"2014-08-14T20:25:43+0900".dateInISO8601Format()

@@ -121,6 +121,20 @@ extension Date {
         return Date(year: now.year, month: now.month, day: now.day)
     }
 
+    /// Creates a new instance representing yesterday
+    ///
+    /// - returns: The created `Date` instance representing yesterday.
+    public static func yesterday() -> Date {
+        return (today() - 1.day)!
+    }
+
+    /// Creates a new instance representing tomorrow
+    ///
+    /// - returns: The created `Date` instance representing tomorrow.
+    public static func tomorrow() -> Date {
+        return (today() + 1.day)!
+    }
+
     /// Creates a new instance added a `DateComponents`
     ///
     /// - parameter left:  The date.

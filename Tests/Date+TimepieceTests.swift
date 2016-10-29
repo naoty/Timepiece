@@ -89,6 +89,42 @@ class DateTests: XCTestCase {
         XCTAssertEqual(dateComponents.weekday, 6)
     }
 
+    func testToday() {
+        let today = Date.today()
+        let now = Date()
+
+        XCTAssertEqual(today.year, now.year)
+        XCTAssertEqual(today.month, now.month)
+        XCTAssertEqual(today.day, now.day)
+        XCTAssertEqual(today.hour, 0)
+        XCTAssertEqual(today.minute, 0)
+        XCTAssertEqual(today.second, 0)
+    }
+
+    func testYesterday() {
+        let yesterday = Date.yesterday()
+        let date = Date() - 1.day
+
+        XCTAssertEqual(yesterday.year, date?.year)
+        XCTAssertEqual(yesterday.month, date?.month)
+        XCTAssertEqual(yesterday.day, date?.day)
+        XCTAssertEqual(yesterday.hour, 0)
+        XCTAssertEqual(yesterday.minute, 0)
+        XCTAssertEqual(yesterday.second, 0)
+    }
+
+    func testTomorrow() {
+        let tomorrow = Date.tomorrow()
+        let date = Date() + 1.day
+
+        XCTAssertEqual(tomorrow.year, date?.year)
+        XCTAssertEqual(tomorrow.month, date?.month)
+        XCTAssertEqual(tomorrow.day, date?.day)
+        XCTAssertEqual(tomorrow.hour, 0)
+        XCTAssertEqual(tomorrow.minute, 0)
+        XCTAssertEqual(tomorrow.second, 0)
+    }
+
     func testPlusDateComponents() {
         let date = Date(year: 2016, month: 1, day: 1)
 

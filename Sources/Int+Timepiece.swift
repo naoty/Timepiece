@@ -74,11 +74,19 @@ public extension Int {
         dateComponents.second = self
         return dateComponents
     }
+
+    var seconds: DateComponents {
+        return second
+    }
     
     var nanosecond: DateComponents {
         var dateComponents = DateComponents()
         dateComponents.nanosecond = self
         return dateComponents
+    }
+
+    var nanoseconds: DateComponents {
+        return nanosecond
     }
 }
 

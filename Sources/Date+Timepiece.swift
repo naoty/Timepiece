@@ -182,7 +182,7 @@ extension Date {
     ///
     /// - parameter timeStyle: The time style.
     ///
-    /// - returns: The created a `String` instance.
+    /// - returns: The created `String` instance.
     public func timeString(in timeStyle: DateFormatter.Style) -> String {
         return string(inDateStyle: .none, andTimeStyle: timeStyle)
     }

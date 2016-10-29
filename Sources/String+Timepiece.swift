@@ -17,4 +17,13 @@ extension String {
 
         return dateFormatter.date(from: self)
     }
+
+    @available(iOS 10.0, *)
+    public func dateInISO8601Format(withOptions options: ISO8601DateFormatter.Options = [.withInternetDateTime]) -> Date? {
+        let dateFormatter = ISO8601DateFormatter()
+        dateFormatter.formatOptions = options
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+
+        return dateFormatter.date(from: self)
+    }
 }

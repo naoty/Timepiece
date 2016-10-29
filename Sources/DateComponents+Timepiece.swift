@@ -105,4 +105,17 @@ public extension DateComponents {
     static func - (left: DateComponents, right: DateComponents) -> DateComponents {
         return left + (-right)
     }
+
+    /// Creates a `String` instance representing the receiver formatted in given units style.
+    ///
+    /// - parameter unitsStyle: The units style.
+    ///
+    /// - returns: The created a `String` instance.
+    public func string(in unitsStyle: DateComponentsFormatter.UnitsStyle) -> String? {
+        let dateComponentsFormatter = DateComponentsFormatter()
+        dateComponentsFormatter.unitsStyle = unitsStyle
+        dateComponentsFormatter.allowedUnits = [.year, .month, .weekOfMonth, .day, .hour, .minute, .second, .nanosecond]
+
+        return dateComponentsFormatter.string(from: self)
+    }
 }

@@ -68,4 +68,13 @@ class DateComponentsTests: XCTestCase {
         XCTAssertEqual(subtracted.year, 1)
         XCTAssertEqual(subtracted.month, -1)
     }
+
+    func testStringInUnitsStyle() {
+        var dateComponents = DateComponents()
+        dateComponents.hour = 3
+        dateComponents.minute = 0
+        dateComponents.second = 5
+
+        XCTAssertEqual(dateComponents.string(in: .positional), "3:00:05")
+    }
 }

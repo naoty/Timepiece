@@ -55,4 +55,54 @@ public extension DateComponents {
 
         return dateComponents
     }
+
+    /// Creates a instance calculated by the addition of `right` and `left`
+    ///
+    /// - parameter left:  The date components at left side.
+    /// - parameter right: The date components at right side.
+    ///
+    /// - returns: Created `DateComponents` instance.
+    static func + (left: DateComponents, right: DateComponents) -> DateComponents {
+        var dateComponents = left
+
+        if let year = right.year {
+            dateComponents.year = (dateComponents.year ?? 0) + year
+        }
+
+        if let month = right.month {
+            dateComponents.month = (dateComponents.month ?? 0) + month
+        }
+
+        if let day = right.day {
+            dateComponents.day = (dateComponents.day ?? 0) + day
+        }
+
+        if let hour = right.hour {
+            dateComponents.hour = (dateComponents.hour ?? 0) + hour
+        }
+
+        if let minute = right.minute {
+            dateComponents.minute = (dateComponents.minute ?? 0) + minute
+        }
+
+        if let second = right.second {
+            dateComponents.second = (dateComponents.second ?? 0) + second
+        }
+
+        if let nanosecond = right.nanosecond {
+            dateComponents.nanosecond = (dateComponents.nanosecond ?? 0) + nanosecond
+        }
+
+        return dateComponents
+    }
+
+    /// Creates a instance calculated by the subtraction from `right` to `left`
+    ///
+    /// - parameter left:  The date components at left side.
+    /// - parameter right: The date components at right side.
+    ///
+    /// - returns: Created `DateComponents` instance.
+    static func - (left: DateComponents, right: DateComponents) -> DateComponents {
+        return left + (-right)
+    }
 }

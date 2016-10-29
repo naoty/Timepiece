@@ -44,4 +44,28 @@ class DateComponentsTests: XCTestCase {
         XCTAssertEqual(inverse.second, -1)
         XCTAssertEqual(inverse.nanosecond, -1)
     }
+
+    func testPlusDateComponents() {
+        var dateComponents1 = DateComponents()
+        dateComponents1.year = 1
+
+        var dateComponents2 = DateComponents()
+        dateComponents2.month = 1
+
+        let added = dateComponents1 + dateComponents2
+        XCTAssertEqual(added.year, 1)
+        XCTAssertEqual(added.month, 1)
+    }
+
+    func testMinusDateComponents() {
+        var dateComponents1 = DateComponents()
+        dateComponents1.year = 1
+
+        var dateComponents2 = DateComponents()
+        dateComponents2.month = 1
+
+        let subtracted = dateComponents1 - dateComponents2
+        XCTAssertEqual(subtracted.year, 1)
+        XCTAssertEqual(subtracted.month, -1)
+    }
 }

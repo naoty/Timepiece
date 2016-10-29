@@ -127,7 +127,7 @@ extension Date {
     /// - parameter right: The date components.
     ///
     /// - returns: The created `Date` instance.
-    public static func +(left: Date, right: DateComponents) -> Date? {
+    public static func + (left: Date, right: DateComponents) -> Date? {
         return Calendar.current.date(byAdding: right, to: left)
     }
 
@@ -137,7 +137,7 @@ extension Date {
     /// - parameter right: The date components.
     ///
     /// - returns: The created `Date` instance.
-    public static func -(left: Date, right: DateComponents) -> Date? {
+    public static func - (left: Date, right: DateComponents) -> Date? {
         return Calendar.current.date(byAdding: -right, to: left)
     }
 }

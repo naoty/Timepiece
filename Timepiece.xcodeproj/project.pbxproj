@@ -7,57 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DE7CFC91B2712F400E0F331 /* NSCalendar+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA183001AEBC2DB00D95B9B /* NSCalendar+Timepiece.swift */; };
-		3DE7CFCA1B2712F400E0F331 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36DD67199FBE6700E752F5 /* Duration.swift */; };
+		3D33C2401DB1C38200E9A8B0 /* Date+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33C23F1DB1C38200E9A8B0 /* Date+TimepieceTests.swift */; };
+		3D33C2411DB1C38200E9A8B0 /* Date+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33C23F1DB1C38200E9A8B0 /* Date+TimepieceTests.swift */; };
+		3D33C2421DB1C38200E9A8B0 /* Date+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33C23F1DB1C38200E9A8B0 /* Date+TimepieceTests.swift */; };
+		3D49D4901DB36C30000EED3F /* DateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49D48F1DB36C30000EED3F /* DateComponents+Timepiece.swift */; };
+		3D49D4911DB36C30000EED3F /* DateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49D48F1DB36C30000EED3F /* DateComponents+Timepiece.swift */; };
+		3D49D4921DB36C30000EED3F /* DateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49D48F1DB36C30000EED3F /* DateComponents+Timepiece.swift */; };
+		3D49D4931DB36C30000EED3F /* DateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49D48F1DB36C30000EED3F /* DateComponents+Timepiece.swift */; };
+		3D49D4951DB3745E000EED3F /* DateComponents+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49D4941DB3745D000EED3F /* DateComponents+TimepieceTests.swift */; };
+		3D49D4961DB3745E000EED3F /* DateComponents+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49D4941DB3745D000EED3F /* DateComponents+TimepieceTests.swift */; };
+		3D49D4971DB3745E000EED3F /* DateComponents+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49D4941DB3745D000EED3F /* DateComponents+TimepieceTests.swift */; };
+		3DA1DC8B1DA143AA00D0A808 /* Date+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA1DC8A1DA143AA00D0A808 /* Date+Timepiece.swift */; };
+		3DA1DC8C1DA143AA00D0A808 /* Date+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA1DC8A1DA143AA00D0A808 /* Date+Timepiece.swift */; };
+		3DA1DC8D1DA143AA00D0A808 /* Date+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA1DC8A1DA143AA00D0A808 /* Date+Timepiece.swift */; };
+		3DA1DC8E1DA143AA00D0A808 /* Date+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA1DC8A1DA143AA00D0A808 /* Date+Timepiece.swift */; };
 		3DE7CFCB1B2712F400E0F331 /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6182A199E26CD00FB7AAC /* Int+Timepiece.swift */; };
-		3DE7CFCC1B2712F400E0F331 /* NSDate+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC61833199F0B2100FB7AAC /* NSDate+Timepiece.swift */; };
-		3DE7CFCD1B2712F400E0F331 /* NSTimeInterval+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF717DE91AFFEECC00A70D2B /* NSTimeInterval+Timepiece.swift */; };
 		3DE7CFCE1B2712F400E0F331 /* String+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4453381AA2C4B900199949 /* String+Timepiece.swift */; };
-		3DE7CFCF1B2712F400E0F331 /* NSDateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA183021AEBC81800D95B9B /* NSDateComponents+Timepiece.swift */; };
-		3DE7CFD01B2712F400E0F331 /* NSCalendarUnit+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA29DB11B03C68000AE149B /* NSCalendarUnit+Timepiece.swift */; };
-		3DE7CFD11B27130300E0F331 /* DurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD0DC31B07A5F700F69BA5 /* DurationTests.swift */; };
 		3DE7CFD21B27130300E0F331 /* Int+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6182C199E26FE00FB7AAC /* Int+TimepieceTests.swift */; };
-		3DE7CFD31B27130300E0F331 /* NSDate+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC61835199F0C0500FB7AAC /* NSDate+TimepieceTests.swift */; };
 		3DE7CFD41B27130300E0F331 /* String+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D44533A1AA2C50B00199949 /* String+TimepieceTests.swift */; };
-		3DE7CFD51B27130300E0F331 /* NSTimeInterval+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2115F11B00A02800B3AD69 /* NSTimeInterval+TimepieceTests.swift */; };
-		3DE7CFD61B27130300E0F331 /* NSCalendarUnit+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA29DB31B03D5F700AE149B /* NSCalendarUnit+TimepieceTests.swift */; };
-		3DE7CFD71B27131A00E0F331 /* NSCalendar+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA183001AEBC2DB00D95B9B /* NSCalendar+Timepiece.swift */; };
-		3DE7CFD81B27131A00E0F331 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36DD67199FBE6700E752F5 /* Duration.swift */; };
 		3DE7CFD91B27131A00E0F331 /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6182A199E26CD00FB7AAC /* Int+Timepiece.swift */; };
-		3DE7CFDA1B27131A00E0F331 /* NSDate+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC61833199F0B2100FB7AAC /* NSDate+Timepiece.swift */; };
-		3DE7CFDB1B27131A00E0F331 /* NSTimeInterval+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF717DE91AFFEECC00A70D2B /* NSTimeInterval+Timepiece.swift */; };
 		3DE7CFDC1B27131A00E0F331 /* String+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4453381AA2C4B900199949 /* String+Timepiece.swift */; };
-		3DE7CFDD1B27131A00E0F331 /* NSDateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA183021AEBC81800D95B9B /* NSDateComponents+Timepiece.swift */; };
-		3DE7CFDE1B27131A00E0F331 /* NSCalendarUnit+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA29DB11B03C68000AE149B /* NSCalendarUnit+Timepiece.swift */; };
-		3DE7CFDF1B27132C00E0F331 /* DurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD0DC31B07A5F700F69BA5 /* DurationTests.swift */; };
 		3DE7CFE01B27132C00E0F331 /* Int+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6182C199E26FE00FB7AAC /* Int+TimepieceTests.swift */; };
-		3DE7CFE11B27132C00E0F331 /* NSDate+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC61835199F0C0500FB7AAC /* NSDate+TimepieceTests.swift */; };
 		3DE7CFE21B27132C00E0F331 /* String+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D44533A1AA2C50B00199949 /* String+TimepieceTests.swift */; };
-		3DE7CFE31B27132C00E0F331 /* NSTimeInterval+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2115F11B00A02800B3AD69 /* NSTimeInterval+TimepieceTests.swift */; };
-		3DE7CFE41B27132C00E0F331 /* NSCalendarUnit+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA29DB31B03D5F700AE149B /* NSCalendarUnit+TimepieceTests.swift */; };
-		8015E21A1BB9B44C00545DF5 /* NSCalendar+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA183001AEBC2DB00D95B9B /* NSCalendar+Timepiece.swift */; };
-		8015E21B1BB9B44C00545DF5 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36DD67199FBE6700E752F5 /* Duration.swift */; };
 		8015E21C1BB9B44C00545DF5 /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6182A199E26CD00FB7AAC /* Int+Timepiece.swift */; };
-		8015E21D1BB9B44C00545DF5 /* NSDate+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC61833199F0B2100FB7AAC /* NSDate+Timepiece.swift */; };
-		8015E21E1BB9B44C00545DF5 /* NSTimeInterval+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF717DE91AFFEECC00A70D2B /* NSTimeInterval+Timepiece.swift */; };
 		8015E21F1BB9B44C00545DF5 /* String+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4453381AA2C4B900199949 /* String+Timepiece.swift */; };
-		8015E2201BB9B44C00545DF5 /* NSDateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA183021AEBC81800D95B9B /* NSDateComponents+Timepiece.swift */; };
-		8015E2211BB9B44C00545DF5 /* NSCalendarUnit+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA29DB11B03C68000AE149B /* NSCalendarUnit+Timepiece.swift */; };
 		8061C2A41BB9B62200F0494D /* Timepiece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8061C29A1BB9B62200F0494D /* Timepiece.framework */; };
-		8061C2B11BB9B65B00F0494D /* NSCalendar+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA183001AEBC2DB00D95B9B /* NSCalendar+Timepiece.swift */; };
-		8061C2B21BB9B65B00F0494D /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36DD67199FBE6700E752F5 /* Duration.swift */; };
 		8061C2B31BB9B65B00F0494D /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6182A199E26CD00FB7AAC /* Int+Timepiece.swift */; };
-		8061C2B41BB9B65B00F0494D /* NSDate+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC61833199F0B2100FB7AAC /* NSDate+Timepiece.swift */; };
-		8061C2B51BB9B65B00F0494D /* NSTimeInterval+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF717DE91AFFEECC00A70D2B /* NSTimeInterval+Timepiece.swift */; };
 		8061C2B61BB9B65B00F0494D /* String+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4453381AA2C4B900199949 /* String+Timepiece.swift */; };
-		8061C2B71BB9B65B00F0494D /* NSDateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA183021AEBC81800D95B9B /* NSDateComponents+Timepiece.swift */; };
-		8061C2B81BB9B65B00F0494D /* NSCalendarUnit+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA29DB11B03C68000AE149B /* NSCalendarUnit+Timepiece.swift */; };
-		8061C2B91BB9B65F00F0494D /* DurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD0DC31B07A5F700F69BA5 /* DurationTests.swift */; };
 		8061C2BA1BB9B65F00F0494D /* Int+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6182C199E26FE00FB7AAC /* Int+TimepieceTests.swift */; };
-		8061C2BB1BB9B65F00F0494D /* NSDate+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC61835199F0C0500FB7AAC /* NSDate+TimepieceTests.swift */; };
 		8061C2BC1BB9B65F00F0494D /* String+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D44533A1AA2C50B00199949 /* String+TimepieceTests.swift */; };
-		8061C2BD1BB9B65F00F0494D /* NSTimeInterval+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2115F11B00A02800B3AD69 /* NSTimeInterval+TimepieceTests.swift */; };
-		8061C2BE1BB9B65F00F0494D /* NSCalendarUnit+TimepieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA29DB31B03D5F700AE149B /* NSCalendarUnit+TimepieceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,15 +63,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D36DD67199FBE6700E752F5 /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		3D33C23F1DB1C38200E9A8B0 /* Date+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+TimepieceTests.swift"; sourceTree = "<group>"; };
 		3D4453381AA2C4B900199949 /* String+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Timepiece.swift"; sourceTree = "<group>"; };
 		3D44533A1AA2C50B00199949 /* String+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TimepieceTests.swift"; sourceTree = "<group>"; };
+		3D49D48F1DB36C30000EED3F /* DateComponents+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateComponents+Timepiece.swift"; sourceTree = "<group>"; };
+		3D49D4941DB3745D000EED3F /* DateComponents+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateComponents+TimepieceTests.swift"; sourceTree = "<group>"; };
+		3DA1DC8A1DA143AA00D0A808 /* Date+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Timepiece.swift"; sourceTree = "<group>"; };
 		3DC6180F199E1F8400FB7AAC /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC6181A199E1F8400FB7AAC /* Timepiece iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Timepiece iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC6182A199E26CD00FB7AAC /* Int+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Timepiece.swift"; sourceTree = "<group>"; };
 		3DC6182C199E26FE00FB7AAC /* Int+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+TimepieceTests.swift"; sourceTree = "<group>"; };
-		3DC61833199F0B2100FB7AAC /* NSDate+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Timepiece.swift"; sourceTree = "<group>"; };
-		3DC61835199F0C0500FB7AAC /* NSDate+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+TimepieceTests.swift"; sourceTree = "<group>"; };
 		3DE7CFB01B27126F00E0F331 /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE7CFB31B27126F00E0F331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DE7CFB41B27126F00E0F331 /* Timepiece OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Timepiece OSX.h"; sourceTree = "<group>"; };
@@ -103,13 +82,6 @@
 		8015E2121BB9B41400545DF5 /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8061C29A1BB9B62200F0494D /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8061C2A31BB9B62200F0494D /* Timepiece tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Timepiece tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF2115F11B00A02800B3AD69 /* NSTimeInterval+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+TimepieceTests.swift"; sourceTree = "<group>"; };
-		DF717DE91AFFEECC00A70D2B /* NSTimeInterval+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+Timepiece.swift"; sourceTree = "<group>"; };
-		DFA183001AEBC2DB00D95B9B /* NSCalendar+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCalendar+Timepiece.swift"; sourceTree = "<group>"; };
-		DFA183021AEBC81800D95B9B /* NSDateComponents+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateComponents+Timepiece.swift"; sourceTree = "<group>"; };
-		DFA29DB11B03C68000AE149B /* NSCalendarUnit+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCalendarUnit+Timepiece.swift"; sourceTree = "<group>"; };
-		DFA29DB31B03D5F700AE149B /* NSCalendarUnit+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCalendarUnit+TimepieceTests.swift"; sourceTree = "<group>"; };
-		DFFD0DC31B07A5F700F69BA5 /* DurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,14 +166,10 @@
 		3DC61828199E204800FB7AAC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DFA183001AEBC2DB00D95B9B /* NSCalendar+Timepiece.swift */,
-				3D36DD67199FBE6700E752F5 /* Duration.swift */,
+				3DA1DC8A1DA143AA00D0A808 /* Date+Timepiece.swift */,
+				3D49D48F1DB36C30000EED3F /* DateComponents+Timepiece.swift */,
 				3DC6182A199E26CD00FB7AAC /* Int+Timepiece.swift */,
-				3DC61833199F0B2100FB7AAC /* NSDate+Timepiece.swift */,
-				DF717DE91AFFEECC00A70D2B /* NSTimeInterval+Timepiece.swift */,
 				3D4453381AA2C4B900199949 /* String+Timepiece.swift */,
-				DFA183021AEBC81800D95B9B /* NSDateComponents+Timepiece.swift */,
-				DFA29DB11B03C68000AE149B /* NSCalendarUnit+Timepiece.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -209,12 +177,10 @@
 		3DC61829199E204800FB7AAC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DFFD0DC31B07A5F700F69BA5 /* DurationTests.swift */,
+				3D33C23F1DB1C38200E9A8B0 /* Date+TimepieceTests.swift */,
+				3D49D4941DB3745D000EED3F /* DateComponents+TimepieceTests.swift */,
 				3DC6182C199E26FE00FB7AAC /* Int+TimepieceTests.swift */,
-				3DC61835199F0C0500FB7AAC /* NSDate+TimepieceTests.swift */,
 				3D44533A1AA2C50B00199949 /* String+TimepieceTests.swift */,
-				DF2115F11B00A02800B3AD69 /* NSTimeInterval+TimepieceTests.swift */,
-				DFA29DB31B03D5F700AE149B /* NSCalendarUnit+TimepieceTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -421,7 +387,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Naoto Kaneko";
 				TargetAttributes = {
 					3DC6180E199E1F8400FB7AAC = {
@@ -535,14 +501,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DE7CFD71B27131A00E0F331 /* NSCalendar+Timepiece.swift in Sources */,
-				3DE7CFD81B27131A00E0F331 /* Duration.swift in Sources */,
 				3DE7CFD91B27131A00E0F331 /* Int+Timepiece.swift in Sources */,
-				3DE7CFDA1B27131A00E0F331 /* NSDate+Timepiece.swift in Sources */,
-				3DE7CFDB1B27131A00E0F331 /* NSTimeInterval+Timepiece.swift in Sources */,
 				3DE7CFDC1B27131A00E0F331 /* String+Timepiece.swift in Sources */,
-				3DE7CFDD1B27131A00E0F331 /* NSDateComponents+Timepiece.swift in Sources */,
-				3DE7CFDE1B27131A00E0F331 /* NSCalendarUnit+Timepiece.swift in Sources */,
+				3D49D4901DB36C30000EED3F /* DateComponents+Timepiece.swift in Sources */,
+				3DA1DC8B1DA143AA00D0A808 /* Date+Timepiece.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,12 +512,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DE7CFDF1B27132C00E0F331 /* DurationTests.swift in Sources */,
 				3DE7CFE01B27132C00E0F331 /* Int+TimepieceTests.swift in Sources */,
-				3DE7CFE11B27132C00E0F331 /* NSDate+TimepieceTests.swift in Sources */,
 				3DE7CFE21B27132C00E0F331 /* String+TimepieceTests.swift in Sources */,
-				3DE7CFE31B27132C00E0F331 /* NSTimeInterval+TimepieceTests.swift in Sources */,
-				3DE7CFE41B27132C00E0F331 /* NSCalendarUnit+TimepieceTests.swift in Sources */,
+				3D49D4951DB3745E000EED3F /* DateComponents+TimepieceTests.swift in Sources */,
+				3D33C2401DB1C38200E9A8B0 /* Date+TimepieceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,14 +523,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DE7CFC91B2712F400E0F331 /* NSCalendar+Timepiece.swift in Sources */,
-				3DE7CFCA1B2712F400E0F331 /* Duration.swift in Sources */,
 				3DE7CFCB1B2712F400E0F331 /* Int+Timepiece.swift in Sources */,
-				3DE7CFCC1B2712F400E0F331 /* NSDate+Timepiece.swift in Sources */,
-				3DE7CFCD1B2712F400E0F331 /* NSTimeInterval+Timepiece.swift in Sources */,
 				3DE7CFCE1B2712F400E0F331 /* String+Timepiece.swift in Sources */,
-				3DE7CFCF1B2712F400E0F331 /* NSDateComponents+Timepiece.swift in Sources */,
-				3DE7CFD01B2712F400E0F331 /* NSCalendarUnit+Timepiece.swift in Sources */,
+				3D49D4911DB36C30000EED3F /* DateComponents+Timepiece.swift in Sources */,
+				3DA1DC8C1DA143AA00D0A808 /* Date+Timepiece.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,12 +534,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DE7CFD11B27130300E0F331 /* DurationTests.swift in Sources */,
 				3DE7CFD21B27130300E0F331 /* Int+TimepieceTests.swift in Sources */,
-				3DE7CFD31B27130300E0F331 /* NSDate+TimepieceTests.swift in Sources */,
 				3DE7CFD41B27130300E0F331 /* String+TimepieceTests.swift in Sources */,
-				3DE7CFD51B27130300E0F331 /* NSTimeInterval+TimepieceTests.swift in Sources */,
-				3DE7CFD61B27130300E0F331 /* NSCalendarUnit+TimepieceTests.swift in Sources */,
+				3D49D4961DB3745E000EED3F /* DateComponents+TimepieceTests.swift in Sources */,
+				3D33C2411DB1C38200E9A8B0 /* Date+TimepieceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,14 +545,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8015E2201BB9B44C00545DF5 /* NSDateComponents+Timepiece.swift in Sources */,
 				8015E21F1BB9B44C00545DF5 /* String+Timepiece.swift in Sources */,
-				8015E21D1BB9B44C00545DF5 /* NSDate+Timepiece.swift in Sources */,
-				8015E21A1BB9B44C00545DF5 /* NSCalendar+Timepiece.swift in Sources */,
-				8015E2211BB9B44C00545DF5 /* NSCalendarUnit+Timepiece.swift in Sources */,
-				8015E21B1BB9B44C00545DF5 /* Duration.swift in Sources */,
-				8015E21E1BB9B44C00545DF5 /* NSTimeInterval+Timepiece.swift in Sources */,
+				3D49D4921DB36C30000EED3F /* DateComponents+Timepiece.swift in Sources */,
 				8015E21C1BB9B44C00545DF5 /* Int+Timepiece.swift in Sources */,
+				3DA1DC8D1DA143AA00D0A808 /* Date+Timepiece.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,14 +556,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8061C2B71BB9B65B00F0494D /* NSDateComponents+Timepiece.swift in Sources */,
 				8061C2B61BB9B65B00F0494D /* String+Timepiece.swift in Sources */,
-				8061C2B41BB9B65B00F0494D /* NSDate+Timepiece.swift in Sources */,
-				8061C2B11BB9B65B00F0494D /* NSCalendar+Timepiece.swift in Sources */,
-				8061C2B81BB9B65B00F0494D /* NSCalendarUnit+Timepiece.swift in Sources */,
-				8061C2B21BB9B65B00F0494D /* Duration.swift in Sources */,
-				8061C2B51BB9B65B00F0494D /* NSTimeInterval+Timepiece.swift in Sources */,
+				3D49D4931DB36C30000EED3F /* DateComponents+Timepiece.swift in Sources */,
 				8061C2B31BB9B65B00F0494D /* Int+Timepiece.swift in Sources */,
+				3DA1DC8E1DA143AA00D0A808 /* Date+Timepiece.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,12 +567,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8061C2BD1BB9B65F00F0494D /* NSTimeInterval+TimepieceTests.swift in Sources */,
-				8061C2BB1BB9B65F00F0494D /* NSDate+TimepieceTests.swift in Sources */,
 				8061C2BA1BB9B65F00F0494D /* Int+TimepieceTests.swift in Sources */,
-				8061C2B91BB9B65F00F0494D /* DurationTests.swift in Sources */,
-				8061C2BE1BB9B65F00F0494D /* NSCalendarUnit+TimepieceTests.swift in Sources */,
+				3D49D4971DB3745E000EED3F /* DateComponents+TimepieceTests.swift in Sources */,
 				8061C2BC1BB9B65F00F0494D /* String+TimepieceTests.swift in Sources */,
+				3D33C2421DB1C38200E9A8B0 /* Date+TimepieceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,8 +609,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -676,6 +622,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -713,8 +660,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -723,6 +672,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -733,6 +683,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -745,6 +696,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -765,6 +717,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -913,6 +866,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -934,6 +888,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -956,6 +911,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -979,6 +935,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;

@@ -1,69 +1,60 @@
-# Timepiece [![Version](http://img.shields.io/cocoapods/v/Timepiece.svg?style=flat)](http://cocoadocs.org/docsets/Timepiece) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.org/naoty/Timepiece.svg?branch=travis-ci)](https://travis-ci.org/naoty/Timepiece)
-Intuitive NSDate extensions in Swift
+# Timepiece
+Intuitive date handling in Swift
+
+## Features
+* :bulb: **Intuitive**: Timepiece provides a set of helpers to make date handling easier.
+* :clock9: **Correct**: Using Foundation API correctly, Timepiece helps to calculate dates correctly without deep understanding.
+* :package: **Small**: Timepiece has only 4 file and < 400 sloc. You can read the inside of this easily.
+
+## Requirements
+
+| version | Swift | iOS  | macOS | tvOS | watchOS | NOTE |
+| ------- | ----- | ---- | ----- | ---- | ------- | ---- |
+| 1.0.0+  | 3.0+  | 8.0+ | 10.9+ | 9.0+ | 2.0+    | Incompatible with 0.6.x |
+| 0.6.0+  | 3.0+  | 8.0+ | 10.9+ | 9.0+ | 2.0+    | |
+| 0.5.0+  | 2.3   | 8.0+ | 10.9+ | 9.0+ | 2.0+    | |
 
 ## Usage
 
-### Add durations to date
+### Initialization
 
 ```swift
-let now = NSDate()
-let nextWeek = now + 1.week
-let dayAfterTomorrow = now + 2.days
+Date(era: 235, year: 26, month: 8, day: 14, hour: 20, minute: 25, second: 43, nanosecond: 0, on: Calendar(identifier: .japanese))
+Date(year: 2014, month: 8, day: 14, hour: 20, minute: 25, second: 43, nanosecond: 0)
+Date(year: 2014, month: 8, day: 14, hour: 20, minute: 25, second: 43)
+Date(year: 2014, month: 8, day: 14)
 
-// shortcuts #1
-let today = NSDate.today()
-let tomorrow = NSDate.tomorrow()
-let yesterday = NSDate.yesterday()
-
-// shortcuts #2
-let dayBeforeYesterday = 2.days.ago
-let tokyoOlympicYear = 5.years.later
+Date.today()
+Date.yesterday()
+Date.tomorrow()
 ```
 
-### Initialize by specifying date components
+### Calculation
 
 ```swift
-let birthday = NSDate.date(year: 1987, month: 6, day: 2)
-let firstCommitDate = NSDate.date(year: 2014, month: 8, day: 15, hour: 20, minute: 25, second: 43)
+now + 1.year
+now - 2.months
+now + (3.weeks - 4.days + 5.hours)
+
+1.year.later
+1.year.ago
 ```
 
-### Initialize by changing date components
+### Formating
 
 ```swift
-let now = NSDate()
-let christmas = now.change(month: 12, day: 25)
-let thisSunday = now.change(weekday: 1)
+now.string(inDateStyle: .long, andTimeStyle: .medium)
+now.dateString(in: .medium)
+now.timeString(in: .short)
 
-// shortcuts
-let newYearDay = now.beginningOfYear
-let timeLimit = now.endOfHour
+3.days.string(in: .full)
 ```
 
-### Time zone
+### Parsing
 
 ```swift
-let now = NSDate()
-let cst = NSTimeZone(name: "CST")!
-let dateInCST = now.beginningOfDay.change(timeZone: cst)
-dateInCST.timeZone //=> CST (CDT) offset -18000 (Daylight)
-```
-
-### Format and parse
-
-```swift
-5.minutes.later.stringFromFormat("yyyy-MM-dd HH:mm:SS")
-//=> "2015-03-01 12:05:00"
-
-"1987-06-02".dateFromFormat("yyyy-MM-dd")
-//=> NSDate.date(year: 1987, month: 6, day: 2)
-```
-
-### Compare dates
-
-```swift
-firstCommitDate < 1.year.ago // false
-(1.year.ago...now).contains(firstCommitDate) // true
-firstCommitDate > now // false
+"2014/8/14".date(inFormat: "yyyy/MM/dd")
+"2014-08-14T20:25:43+0900".dateInISO8601Format()
 ```
 
 ## Installation
@@ -97,3 +88,4 @@ Timepiece is available under the MIT license. See the LICENSE file for more info
 ## Author
 
 [naoty](https://github.com/naoty)
+

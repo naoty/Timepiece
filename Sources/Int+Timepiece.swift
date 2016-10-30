@@ -9,52 +9,83 @@
 import Foundation
 
 public extension Int {
-    var year: Duration {
-        return Duration(value: self, unit: .year)
+    var year: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.year = self
+        return dateComponents
     }
-    var years: Duration {
+
+    var years: DateComponents {
         return year
     }
-    
-    var month: Duration {
-        return Duration(value: self, unit: .month)
+
+    var month: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.month = self
+        return dateComponents
     }
-    var months: Duration {
+
+    var months: DateComponents {
         return month
     }
-    
-    var week: Duration {
-        return Duration(value: self, unit: .weekOfYear)
+
+    var week: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.day = 7 * self
+        return dateComponents
     }
-    var weeks: Duration {
+
+    var weeks: DateComponents {
         return week
     }
-    
-    var day: Duration {
-        return Duration(value: self, unit: .day)
+
+    var day: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.day = self
+        return dateComponents
     }
-    var days: Duration {
+
+    var days: DateComponents {
         return day
     }
-    
-    var hour: Duration {
-        return Duration(value: self, unit: .hour)
+
+    var hour: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.hour = self
+        return dateComponents
     }
-    var hours: Duration {
+
+    var hours: DateComponents {
         return hour
     }
-    
-    var minute: Duration {
-        return Duration(value: self, unit: .minute)
+
+    var minute: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.minute = self
+        return dateComponents
     }
-    var minutes: Duration {
+
+    var minutes: DateComponents {
         return minute
     }
-    
-    var second: Duration {
-        return Duration(value: self, unit: .second)
+
+    var second: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.second = self
+        return dateComponents
     }
-    var seconds: Duration {
+
+    var seconds: DateComponents {
         return second
+    }
+
+    var nanosecond: DateComponents {
+        var dateComponents = DateComponents()
+        dateComponents.nanosecond = self
+        return dateComponents
+    }
+
+    var nanoseconds: DateComponents {
+        return nanosecond
     }
 }

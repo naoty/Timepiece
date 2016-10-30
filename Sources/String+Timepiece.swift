@@ -8,18 +8,32 @@
 
 import Foundation
 
-public extension String {
-    // MARK - Parse into NSDate
-    
-    @available(*, deprecated: 2.0, renamed: "dateFromFormat(_:locale:)")
-    func dateFromFormat(_ format: String) -> Date? {
-        return dateFromFormat(format, locale: DateFormatter().locale)
+extension String {
+    /// Creates a `Date` instance representing the receiver parsed into `Date` in a given format.
+    ///
+    /// - parameter format: The format to be used to parse.
+    ///
+    /// - returns: The created `Date` instance.
+    public func date(inFormat format: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+
+        return dateFormatter.date(from: self)
     }
-    
-    func dateFromFormat(_ format: String, locale: Locale) -> Date? {
-        let formatter = DateFormatter()
-        formatter.locale = locale
-        formatter.dateFormat = format
-        return formatter.date(from: self)
+
+    /// Creates a `Date` instance representing the receiver in ISO8601 format parsed into `Date` with given options.
+    ///
+    /// - parameter options: The options to be used to parse.
+    ///
+    /// - returns: The created `Date` instance.
+    @available(iOS 10.0, *)
+    public func dateInISO8601Format(withOptions options: ISO8601DateFormatter.Options = [.withInternetDateTime]) -> Date? {
+        let dateFormatter = ISO8601DateFormatter()
+        dateFormatter.formatOptions = options
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+
+        return dateFormatter.date(from: self)
     }
 }

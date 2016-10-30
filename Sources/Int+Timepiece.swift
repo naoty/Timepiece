@@ -18,7 +18,7 @@ public extension Int {
     var years: DateComponents {
         return year
     }
-    
+
     var month: DateComponents {
         var dateComponents = DateComponents()
         dateComponents.month = self
@@ -58,7 +58,7 @@ public extension Int {
     var hours: DateComponents {
         return hour
     }
-    
+
     var minute: DateComponents {
         var dateComponents = DateComponents()
         dateComponents.minute = self
@@ -68,7 +68,7 @@ public extension Int {
     var minutes: DateComponents {
         return minute
     }
-    
+
     var second: DateComponents {
         var dateComponents = DateComponents()
         dateComponents.second = self
@@ -78,7 +78,7 @@ public extension Int {
     var seconds: DateComponents {
         return second
     }
-    
+
     var nanosecond: DateComponents {
         var dateComponents = DateComponents()
         dateComponents.nanosecond = self

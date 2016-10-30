@@ -111,6 +111,7 @@ public extension DateComponents {
     /// - parameter unitsStyle: The units style.
     ///
     /// - returns: The created a `String` instance.
+    @available(OSX 10.10, *)
     public func string(in unitsStyle: DateComponentsFormatter.UnitsStyle) -> String? {
         let dateComponentsFormatter = DateComponentsFormatter()
         dateComponentsFormatter.unitsStyle = unitsStyle

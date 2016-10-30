@@ -12,12 +12,16 @@ import XCTest
 class StringTests: XCTestCase {
     func testDateInFormat() {
         let date = "2014-08-15T20:25:43+0900".date(inFormat: "yyyy-MM-dd'T'HH:mm:ssZ")
-        XCTAssertEqual(date, Date(year: 2014, month: 8, day: 15, hour: 20, minute: 25, second: 43))
+        XCTAssertEqual(date?.year, 2014)
+        XCTAssertEqual(date?.month, 8)
+        XCTAssertEqual(date?.day, 15)
     }
 
     @available(iOS 10.0, *)
     func testDateInISO8601Format() {
         let date = "2014-08-15T20:25:43+0900".dateInISO8601Format()
-        XCTAssertEqual(date, Date(year: 2014, month: 8, day: 15, hour: 20, minute: 25, second: 43))
+        XCTAssertEqual(date?.year, 2014)
+        XCTAssertEqual(date?.month, 8)
+        XCTAssertEqual(date?.day, 15)
     }
 }

@@ -3,7 +3,7 @@ Intuitive date handling in Swift
 
 ## Features
 * :bulb: **Intuitive**: Timepiece provides a set of helpers to make date handling easier.
-* :clock9: **Correctness**: Using Foundation API correctly, Timepiece helps to calculate dates correctly without deep understanding.
+* :clock9: **Correct**: Using Foundation API correctly, Timepiece helps to calculate dates correctly without deep understanding.
 * :package: **Small**: Timepiece has only 4 file and < 400 sloc. You can read the inside of this easily.
 
 ## Requirements

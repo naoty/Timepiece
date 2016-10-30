@@ -1,4 +1,4 @@
-# Timepiece
+# Timepiece  [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Timepiece.svg)](https://cocoapods.org/pods/Timepiece) [![Build Status](http://img.shields.io/travis/naoty/Timepiece/master.svg?style=flat)](https://travis-ci.org/naoty/Timepiece)
 Intuitive date handling in Swift
 
 ## Features

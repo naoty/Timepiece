@@ -10,9 +10,7 @@ import Foundation
 
 public extension Int {
     var year: DateComponents {
-        var dateComponents = DateComponents()
-        dateComponents.year = self
-        return dateComponents
+        return DateComponents(year: self)
     }
 
     var years: DateComponents {
@@ -20,9 +18,7 @@ public extension Int {
     }
 
     var month: DateComponents {
-        var dateComponents = DateComponents()
-        dateComponents.month = self
-        return dateComponents
+        return DateComponents(month: self)
     }
 
     var months: DateComponents {
@@ -30,9 +26,7 @@ public extension Int {
     }
 
     var week: DateComponents {
-        var dateComponents = DateComponents()
-        dateComponents.day = 7 * self
-        return dateComponents
+        return DateComponents(day: 7 * self)
     }
 
     var weeks: DateComponents {
@@ -40,9 +34,7 @@ public extension Int {
     }
 
     var day: DateComponents {
-        var dateComponents = DateComponents()
-        dateComponents.day = self
-        return dateComponents
+        return DateComponents(day: self)
     }
 
     var days: DateComponents {
@@ -50,9 +42,7 @@ public extension Int {
     }
 
     var hour: DateComponents {
-        var dateComponents = DateComponents()
-        dateComponents.hour = self
-        return dateComponents
+        return DateComponents(hour: self)
     }
 
     var hours: DateComponents {
@@ -60,9 +50,7 @@ public extension Int {
     }
 
     var minute: DateComponents {
-        var dateComponents = DateComponents()
-        dateComponents.minute = self
-        return dateComponents
+        return DateComponents(minute: self)
     }
 
     var minutes: DateComponents {
@@ -70,9 +58,7 @@ public extension Int {
     }
 
     var second: DateComponents {
-        var dateComponents = DateComponents()
-        dateComponents.second = self
-        return dateComponents
+        return DateComponents(second: self)
     }
 
     var seconds: DateComponents {
@@ -80,9 +66,7 @@ public extension Int {
     }
 
     var nanosecond: DateComponents {
-        var dateComponents = DateComponents()
-        dateComponents.nanosecond = self
-        return dateComponents
+        return DateComponents(nanosecond: self)
     }
 
     var nanoseconds: DateComponents {

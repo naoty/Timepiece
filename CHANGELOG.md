@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 1.0.1
+Released on 2016-11-05.
+
+#### Changed
+* Create instance of date components instead of mutable variables.
+
+#### Fixed
+* Fix App Store submission issue.
+
 ## 1.0.0
 Released on 2016-10-30.
 
@@ -18,6 +27,6 @@ Released on 2016-10-30.
 * Properties to get beginning and end of periods such as `beginningOfYear`, `endOfMonth`.
 * `change()`.
 
-#### Updated
+#### Changed
 * For `Int`, `year`, `month` and so on creates new `DateComponents` instance instead of `Duration`.
 

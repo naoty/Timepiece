@@ -1,14 +1,23 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 1.0.2
+Unreleased yet.
+
+#### Fixed
+* Fix testDateInISO8601Format() availability.
+  * Fixed by [danielmartinprieto](https://github.com/danielmartinprieto) in [#74](https://github.com/naoty/Timepiece/pull/74).
+
 ## 1.0.1
 Released on 2016-11-05.
 
 #### Changed
 * Create instance of date components instead of mutable variables.
+  * Changed by [basememara](https://github.com/basememara) in [#67](https://github.com/naoty/Timepiece/pull/67).
 
 #### Fixed
 * Fix App Store submission issue.
+  * Fixed by [basememara](https://github.com/basememara) in [#71](https://github.com/naoty/Timepiece/pull/71).
 
 ## 1.0.0
 Released on 2016-10-30.

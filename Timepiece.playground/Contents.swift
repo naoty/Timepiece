@@ -31,6 +31,9 @@ now + (3.weeks - 4.days + 5.hours)
 1.year.later
 1.year.ago
 
+// Change
+now.changed(year: 2014)
+
 // Format
 now.string(inDateStyle: .long, andTimeStyle: .medium)
 now.dateString(in: .medium)

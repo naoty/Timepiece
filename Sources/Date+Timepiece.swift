@@ -235,6 +235,14 @@ extension Date {
         return changed(year: nil, month: nil, day: nil, hour: nil, minute: nil, second: nil, nanosecond: nanosecond)
     }
 
+    /// Creates a new instance by changing the weekday.
+    ///
+    /// - Parameter weekday: The weekday.
+    /// - Returns: The created `Date` instance.
+    public func changed(weekday: Int) -> Date? {
+        return self - (self.weekday - weekday).days
+    }
+
     /// Creates a new `String` instance representing the receiver formatted in given date style and time style.
     ///
     /// - parameter dateStyle: The date style.

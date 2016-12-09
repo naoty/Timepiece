@@ -158,6 +158,19 @@ class DateTests: XCTestCase {
         XCTAssertEqual(newDate?.nanosecond, 0)
     }
 
+    func testChangedByWeekday() {
+        let date = Date(year: 2014, month: 8, day: 14, hour: 20, minute: 25, second: 43, nanosecond: 0)
+        let newDate = date.changed(weekday: 7)
+
+        XCTAssertEqual(newDate?.year, 2014)
+        XCTAssertEqual(newDate?.month, 8)
+        XCTAssertEqual(newDate?.day, 16)
+        XCTAssertEqual(newDate?.hour, 20)
+        XCTAssertEqual(newDate?.minute, 25)
+        XCTAssertEqual(newDate?.second, 43)
+        XCTAssertEqual(newDate?.nanosecond, 0)
+    }
+
     func testStringInStyles() {
         let sampleString = sample.string(inDateStyle: .short, andTimeStyle: .short)
         XCTAssertEqual(sampleString, "8/15/14, 8:25 PM")

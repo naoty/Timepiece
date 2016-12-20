@@ -7,6 +7,8 @@ Unreleased yet.
 #### Fixed
 * Fix testDateInISO8601Format() availability.
   * Fixed by [danielmartinprieto](https://github.com/danielmartinprieto) in [#74](https://github.com/naoty/Timepiece/pull/74).
+* Specify Swift version for the compilation of watchOS target.
+  * Fixed by [BasThomas](https://github.com/BasThomas) in [#79](https://github.com/naoty/Timepiece/pull/79).
 
 ## 1.0.1
 Released on 2016-11-05.

@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 
 ## 1.0.2
-Unreleased yet.
+Released on 2016-12-20.
 
 #### Fixed
 * Fix testDateInISO8601Format() availability.

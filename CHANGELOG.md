@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+## 1.1.0
+Released on 2017-01-06.
+
 ### Added
 * `changed(year:month:day:hour:minute:second:nanosecond:)`, which creates a `Date` instance by changing receiver's date components. [#77](https://github.com/naoty/Timepiece/pull/77)
 * `changed(weekday:)`, which creates a `Date` instance by changing receiver's weekday. [#77](https://github.com/naoty/Timepiece/pull/77)

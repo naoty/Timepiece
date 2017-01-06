@@ -155,6 +155,94 @@ extension Date {
         return Calendar.current.date(byAdding: -right, to: left)
     }
 
+    /// Creates a new instance by changing the date components
+    ///
+    /// - Parameters:
+    ///   - year: The year.
+    ///   - month: The month.
+    ///   - day: The day.
+    ///   - hour: The hour.
+    ///   - minute: The minute.
+    ///   - second: The second.
+    ///   - nanosecond: The nanosecond.
+    /// - Returns: The created `Date` instnace.
+    public func changed(year: Int? = nil, month: Int? = nil, day: Int? = nil, hour: Int? = nil, minute: Int? = nil, second: Int? = nil, nanosecond: Int? = nil) -> Date? {
+        var dateComponents = self.dateComponents
+        dateComponents.year = year ?? self.year
+        dateComponents.month = month ?? self.month
+        dateComponents.day = day ?? self.day
+        dateComponents.hour = hour ?? self.hour
+        dateComponents.minute = minute ?? self.minute
+        dateComponents.second = second ?? self.second
+        dateComponents.nanosecond = nanosecond ?? self.nanosecond
+
+        return calendar.date(from: dateComponents)
+    }
+
+    /// Creates a new instance by changing the year.
+    ///
+    /// - Parameter year: The year.
+    /// - Returns: The created `Date` instance.
+    public func changed(year: Int) -> Date? {
+        return changed(year: year, month: nil, day: nil, hour: nil, minute: nil, second: nil, nanosecond: nil)
+    }
+
+    /// Creates a new instance by changing the month.
+    ///
+    /// - Parameter month: The month.
+    /// - Returns: The created `Date` instance.
+    public func changed(month: Int) -> Date? {
+        return changed(year: nil, month: month, day: nil, hour: nil, minute: nil, second: nil, nanosecond: nil)
+    }
+
+    /// Creates a new instance by changing the day.
+    ///
+    /// - Parameter day: The day.
+    /// - Returns: The created `Date` instance.
+    public func changed(day: Int) -> Date? {
+        return changed(year: nil, month: nil, day: day, hour: nil, minute: nil, second: nil, nanosecond: nil)
+    }
+
+    /// Creates a new instance by changing the hour.
+    ///
+    /// - Parameter hour: The hour.
+    /// - Returns: The created `Date` instance.
+    public func changed(hour: Int) -> Date? {
+        return changed(year: nil, month: nil, day: nil, hour: hour, minute: nil, second: nil, nanosecond: nil)
+    }
+
+    /// Creates a new instance by changing the minute.
+    ///
+    /// - Parameter minute: The minute.
+    /// - Returns: The created `Date` instance.
+    public func changed(minute: Int) -> Date? {
+        return changed(year: nil, month: nil, day: nil, hour: nil, minute: minute, second: nil, nanosecond: nil)
+    }
+
+    /// Creates a new instance by changing the second.
+    ///
+    /// - Parameter second: The second.
+    /// - Returns: The created `Date` instance.
+    public func changed(second: Int) -> Date? {
+        return changed(year: nil, month: nil, day: nil, hour: nil, minute: nil, second: second, nanosecond: nil)
+    }
+
+    /// Creates a new instance by changing the nanosecond.
+    ///
+    /// - Parameter nanosecond: The nanosecond.
+    /// - Returns: The created `Date` instance.
+    public func changed(nanosecond: Int) -> Date? {
+        return changed(year: nil, month: nil, day: nil, hour: nil, minute: nil, second: nil, nanosecond: nanosecond)
+    }
+
+    /// Creates a new instance by changing the weekday.
+    ///
+    /// - Parameter weekday: The weekday.
+    /// - Returns: The created `Date` instance.
+    public func changed(weekday: Int) -> Date? {
+        return self - (self.weekday - weekday).days
+    }
+
     /// Creates a new `String` instance representing the receiver formatted in given date style and time style.
     ///
     /// - parameter dateStyle: The date style.

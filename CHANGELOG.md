@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## 1.0.2
+## 1.1.0
 
 #### Added
 * `changed(year:month:day:hour:minute:second:nanosecond:)`, which creates a `Date` instance by changing receiver's date components.
@@ -9,9 +9,14 @@ All notable changes to this project will be documented in this file.
 * `changed(weekday:)`, which creates a `Date` instance by changing receiver's weekday.
   * Added by [naoty](https://github.com/naoty) in [#77](https://github.com/naoty/Timepiece/pull/77)
 
+## 1.0.2
+Released on 2016-12-20.
+
 #### Fixed
 * Fix testDateInISO8601Format() availability.
   * Fixed by [danielmartinprieto](https://github.com/danielmartinprieto) in [#74](https://github.com/naoty/Timepiece/pull/74).
+* Specify Swift version for the compilation of watchOS target.
+  * Fixed by [BasThomas](https://github.com/BasThomas) in [#79](https://github.com/naoty/Timepiece/pull/79).
 
 ## 1.0.1
 Released on 2016-11-05.

@@ -171,6 +171,32 @@ class DateTests: XCTestCase {
         XCTAssertEqual(newDate?.nanosecond, 0)
     }
 
+    func testTruncated() {
+        let date = Date(year: 2014, month: 8, day: 14, hour: 20, minute: 25, second: 43, nanosecond: 0)
+        let newDate = date.truncated([.hour, .minute, .second, .nanosecond])
+
+        XCTAssertEqual(newDate?.year, 2014)
+        XCTAssertEqual(newDate?.month, 8)
+        XCTAssertEqual(newDate?.day, 14)
+        XCTAssertEqual(newDate?.hour, 0)
+        XCTAssertEqual(newDate?.minute, 0)
+        XCTAssertEqual(newDate?.second, 0)
+        XCTAssertEqual(newDate?.nanosecond, 0)
+    }
+
+    func testTruncatedFrom() {
+        let date = Date(year: 2014, month: 8, day: 14, hour: 20, minute: 25, second: 43, nanosecond: 0)
+        let newDate = date.truncated(from: .month)
+
+        XCTAssertEqual(newDate?.year, 2014)
+        XCTAssertEqual(newDate?.month, 1)
+        XCTAssertEqual(newDate?.day, 1)
+        XCTAssertEqual(newDate?.hour, 0)
+        XCTAssertEqual(newDate?.minute, 0)
+        XCTAssertEqual(newDate?.second, 0)
+        XCTAssertEqual(newDate?.nanosecond, 0)
+    }
+
     func testStringInStyles() {
         let sampleString = sample.string(inDateStyle: .short, andTimeStyle: .short)
         XCTAssertEqual(sampleString, "8/15/14, 8:25 PM")

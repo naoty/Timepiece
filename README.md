@@ -45,6 +45,8 @@ now + (3.weeks - 4.days + 5.hours)
 ```swift
 now.changed(year: 2014)
 now.changed(weekday: 1)
+now.truncated([.minute, .second, .nanosecond])
+now.truncated(from: .day)
 ```
 
 ### Formating

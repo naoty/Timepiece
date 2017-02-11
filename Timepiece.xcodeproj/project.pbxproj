@@ -79,6 +79,7 @@
 		3DE7CFBA1B27126F00E0F331 /* Timepiece OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Timepiece OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE7CFC01B27126F00E0F331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DE7CFC11B27126F00E0F331 /* Timepiece_OSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timepiece_OSXTests.swift; sourceTree = "<group>"; };
+		43D08A781E4F85FE00BE400A /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		8015E2121BB9B41400545DF5 /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8061C29A1BB9B62200F0494D /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8061C2A31BB9B62200F0494D /* Timepiece tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Timepiece tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +142,7 @@
 		3DC61805199E1F8400FB7AAC = {
 			isa = PBXGroup;
 			children = (
+				43D08A781E4F85FE00BE400A /* Package.swift */,
 				3DC61828199E204800FB7AAC /* Sources */,
 				3DC61829199E204800FB7AAC /* Tests */,
 				3DE7CFB11B27126F00E0F331 /* Timepiece OSX */,

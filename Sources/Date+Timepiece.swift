@@ -301,12 +301,17 @@ extension Date {
     /// - parameter timeStyle: The time style.
     ///
     /// - returns: The created `String` instance.
-    public func string(inDateStyle dateStyle: DateFormatter.Style, andTimeStyle timeStyle: DateFormatter.Style) -> String {
+    public func stringIn(dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = dateStyle
         dateFormatter.timeStyle = timeStyle
 
         return dateFormatter.string(from: self)
+    }
+
+    @available(*, unavailable, renamed: "stringIn(dateStyle:timeStyle:)")
+    public func string(inDateStyle dateStyle: DateFormatter.Style, andTimeStyle timeStyle: DateFormatter.Style) -> String {
+        return stringIn(dateStyle: dateStyle, timeStyle: timeStyle)
     }
 
     /// Creates a new `String` instance representing the date of the receiver formatted in given date style.
@@ -315,7 +320,7 @@ extension Date {
     ///
     /// - returns: The created `String` instance.
     public func dateString(in dateStyle: DateFormatter.Style) -> String {
-        return string(inDateStyle: dateStyle, andTimeStyle: .none)
+        return stringIn(dateStyle: dateStyle, timeStyle: .none)
     }
 
     /// Creates a new `String` instance representing the time of the receiver formatted in given time style.
@@ -324,6 +329,6 @@ extension Date {
     ///
     /// - returns: The created `String` instance.
     public func timeString(in timeStyle: DateFormatter.Style) -> String {
-        return string(inDateStyle: .none, andTimeStyle: timeStyle)
+        return stringIn(dateStyle: .none, timeStyle: timeStyle)
     }
 }

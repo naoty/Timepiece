@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+## 1.2.0
+Released on 2017-04-30.
+
 ### Added
 * Support Swift Package Manager. [#83](https://github.com/naoty/Timepiece/pull/83)
 * `truncated(_:)`, which creates a `Date` instance by truncating the components. [#82](https://github.com/naoty/Timepiece/pull/82)

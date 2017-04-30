@@ -49,7 +49,7 @@ now.truncated(from: .day)
 ### Formating
 
 ```swift
-now.string(inDateStyle: .long, andTimeStyle: .medium)
+now.stringIn(dateStyle: .long, timeStyle: .medium)
 now.dateString(in: .medium)
 now.timeString(in: .short)
 

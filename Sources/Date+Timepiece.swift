@@ -243,6 +243,58 @@ extension Date {
         return self - (self.weekday - weekday).days
     }
 
+    /// Creates a new instance by truncating the components
+    ///
+    /// - Parameter components: The components to be truncated.
+    /// - Returns: The created `Date` instance.
+    public func truncated(_ components: [Calendar.Component]) -> Date? {
+        var dateComponents = self.dateComponents
+
+        for component in components {
+            switch component {
+            case .month:
+                dateComponents.month = 1
+            case .day:
+                dateComponents.day = 1
+            case .hour:
+                dateComponents.hour = 0
+            case .minute:
+                dateComponents.minute = 0
+            case .second:
+                dateComponents.second = 0
+            case .nanosecond:
+                dateComponents.nanosecond = 0
+            default:
+                continue
+            }
+        }
+        
+        return calendar.date(from: dateComponents)
+    }
+
+    /// Creates a new instance by truncating the components
+    ///
+    /// - Parameter component: The component to be truncated from.
+    /// - Returns: The created `Date` instance.
+    public func truncated(from component: Calendar.Component) -> Date? {
+        switch component {
+        case .month:
+            return truncated([.month, .day, .hour, .minute, .second, .nanosecond])
+        case .day:
+            return truncated([.day, .hour, .minute, .second, .nanosecond])
+        case .hour:
+            return truncated([.hour, .minute, .second, .nanosecond])
+        case .minute:
+            return truncated([.minute, .second, .nanosecond])
+        case .second:
+            return truncated([.second, .nanosecond])
+        case .nanosecond:
+            return truncated([.nanosecond])
+        default:
+            return self
+        }
+    }
+
     /// Creates a new `String` instance representing the receiver formatted in given date style and time style.
     ///
     /// - parameter dateStyle: The date style.

@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+### Added
+* `truncated(_:)`, which creates a `Date` instance by truncating the components.
+* `truncated(from:)`, which creates a `Date` instance by truncating the components from a given component.
+
 ## 1.1.0
 Released on 2017-01-06.
 

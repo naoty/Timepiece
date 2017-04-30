@@ -4,8 +4,13 @@ All notable changes to this project will be documented in this file.
 ## Unreleased
 
 ### Added
-* `truncated(_:)`, which creates a `Date` instance by truncating the components.
-* `truncated(from:)`, which creates a `Date` instance by truncating the components from a given component.
+* Support Swift Package Manager. [#83](https://github.com/naoty/Timepiece/pull/83)
+* `truncated(_:)`, which creates a `Date` instance by truncating the components. [#82](https://github.com/naoty/Timepiece/pull/82)
+* `truncated(from:)`, which creates a `Date` instance by truncating the components from a given component. [#82](https://github.com/naoty/Timepiece/pull/82)
+
+### Fixed
+* Rename `string(inDateStyle:andTimeStyle:)` to `stringIn(dateStyle:timeStyle:)`.
+* Rename `dateInISO8601Format(withOptions:)` to `dateInISO8601Format(with:)`.
 
 ## 1.1.0
 Released on 2017-01-06.

@@ -1,11 +1,11 @@
 language: objective-c
-osx_image: xcode8.1
+osx_image: xcode9
 before_install:
   - gem install xcpretty -N
 script:
   - set -o pipefail
   - xcodebuild -version
   - xcodebuild -showsdks
-  - xcodebuild -project Timepiece.xcodeproj -scheme "Timepiece iOS" -sdk iphonesimulator10.1 -destination "platform=iOS Simulator,name=iPhone 6" ONLY_ACTIVE_ARCH=NO test | xcpretty -c
+  - xcodebuild -project Timepiece.xcodeproj -scheme "Timepiece iOS" -destination "platform=iOS Simulator,name=iPhone 6" ONLY_ACTIVE_ARCH=NO test | xcpretty -c
   - pod lib lint --quick
 

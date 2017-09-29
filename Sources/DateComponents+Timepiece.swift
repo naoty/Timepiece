@@ -115,7 +115,7 @@ public extension DateComponents {
     public func string(in unitsStyle: DateComponentsFormatter.UnitsStyle) -> String? {
         let dateComponentsFormatter = DateComponentsFormatter()
         dateComponentsFormatter.unitsStyle = unitsStyle
-        dateComponentsFormatter.allowedUnits = [.year, .month, .weekOfMonth, .day, .hour, .minute, .second, .nanosecond]
+        dateComponentsFormatter.allowedUnits = [.year, .month, .weekOfMonth, .day, .hour, .minute, .second]
 
         return dateComponentsFormatter.string(from: self)
     }

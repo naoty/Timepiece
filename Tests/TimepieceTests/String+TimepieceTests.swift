@@ -17,7 +17,7 @@ class StringTests: XCTestCase {
         XCTAssertEqual(date?.day, 15)
     }
 
-    @available(iOS 10.0, OSX 10.12, *)
+    @available(iOS 10.0, OSX 10.12, tvOS 10.0, *)
     func testDateInISO8601Format() {
         let date = "2014-08-15T20:25:43+0900".dateInISO8601Format()
         XCTAssertEqual(date?.year, 2014)

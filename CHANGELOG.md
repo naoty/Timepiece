@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+## 1.3.0
+Released on 2017-09-30.
+
+### Added
+* Swift 4 support
+
 ## 1.2.0
 Released on 2017-04-30.
 

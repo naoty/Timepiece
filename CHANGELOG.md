@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+## 1.3.1
+Released on 2017-10-01.
+
+### Fixed
+* Issue where apps could not be summited to Appstore. [#90](https://github.com/naoty/Timepiece/pull/90)
+
 ## 1.3.0
 Released on 2017-09-30.
 

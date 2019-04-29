@@ -76,10 +76,10 @@
 		3DE7CFC01B27126F00E0F331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DE7CFC11B27126F00E0F331 /* Timepiece_OSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timepiece_OSXTests.swift; sourceTree = "<group>"; };
 		43D08A781E4F85FE00BE400A /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		43D08A7A1E4F877700BE400A /* Date+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+TimepieceTests.swift"; path = "TimepieceTests/Date+TimepieceTests.swift"; sourceTree = "<group>"; };
-		43D08A7B1E4F877700BE400A /* DateComponents+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DateComponents+TimepieceTests.swift"; path = "TimepieceTests/DateComponents+TimepieceTests.swift"; sourceTree = "<group>"; };
-		43D08A7C1E4F877700BE400A /* Int+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Int+TimepieceTests.swift"; path = "TimepieceTests/Int+TimepieceTests.swift"; sourceTree = "<group>"; };
-		43D08A7D1E4F877700BE400A /* String+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+TimepieceTests.swift"; path = "TimepieceTests/String+TimepieceTests.swift"; sourceTree = "<group>"; };
+		43D08A7A1E4F877700BE400A /* Date+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+TimepieceTests.swift"; sourceTree = "<group>"; };
+		43D08A7B1E4F877700BE400A /* DateComponents+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateComponents+TimepieceTests.swift"; sourceTree = "<group>"; };
+		43D08A7C1E4F877700BE400A /* Int+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+TimepieceTests.swift"; sourceTree = "<group>"; };
+		43D08A7D1E4F877700BE400A /* String+TimepieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TimepieceTests.swift"; sourceTree = "<group>"; };
 		8015E2121BB9B41400545DF5 /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8061C29A1BB9B62200F0494D /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8061C2A31BB9B62200F0494D /* Timepiece tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Timepiece tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,10 +179,7 @@
 		3DC61829199E204800FB7AAC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				43D08A7A1E4F877700BE400A /* Date+TimepieceTests.swift */,
-				43D08A7B1E4F877700BE400A /* DateComponents+TimepieceTests.swift */,
-				43D08A7C1E4F877700BE400A /* Int+TimepieceTests.swift */,
-				43D08A7D1E4F877700BE400A /* String+TimepieceTests.swift */,
+				4351806A22736A5E008BD0C4 /* TimepieceTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -219,6 +216,17 @@
 				3DE7CFC01B27126F00E0F331 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4351806A22736A5E008BD0C4 /* TimepieceTests */ = {
+			isa = PBXGroup;
+			children = (
+				43D08A7A1E4F877700BE400A /* Date+TimepieceTests.swift */,
+				43D08A7B1E4F877700BE400A /* DateComponents+TimepieceTests.swift */,
+				43D08A7C1E4F877700BE400A /* Int+TimepieceTests.swift */,
+				43D08A7D1E4F877700BE400A /* String+TimepieceTests.swift */,
+			);
+			path = TimepieceTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,7 +397,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Naoto Kaneko";
 				TargetAttributes = {
 					3DC6180E199E1F8400FB7AAC = {
@@ -425,10 +433,11 @@
 			};
 			buildConfigurationList = 3DC61809199E1F8400FB7AAC /* Build configuration list for PBXProject "Timepiece" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 3DC61805199E1F8400FB7AAC;
 			productRefGroup = 3DC61810199E1F8400FB7AAC /* Products */;
@@ -601,6 +610,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -650,7 +660,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -661,6 +671,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -702,7 +713,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -728,7 +739,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -749,7 +760,7 @@
 				PRODUCT_NAME = Timepiece;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -767,7 +778,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -781,7 +792,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -809,7 +820,7 @@
 				PRODUCT_NAME = Timepiece;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -834,7 +845,7 @@
 				PRODUCT_NAME = Timepiece;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -859,7 +870,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -881,7 +892,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -902,7 +913,7 @@
 				PRODUCT_NAME = Timepiece;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -926,7 +937,7 @@
 				PRODUCT_NAME = Timepiece;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -950,7 +961,7 @@
 				PRODUCT_NAME = Timepiece;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -975,7 +986,7 @@
 				PRODUCT_NAME = Timepiece;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -992,7 +1003,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.Timepiece-tvOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
@@ -1009,7 +1020,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.Timepiece-tvOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;

@@ -32,7 +32,6 @@ extension String {
     public func dateInISO8601Format(with options: ISO8601DateFormatter.Options = [.withInternetDateTime]) -> Date? {
         let dateFormatter = ISO8601DateFormatter()
         dateFormatter.formatOptions = options
-        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
 
         return dateFormatter.date(from: self)
     }
